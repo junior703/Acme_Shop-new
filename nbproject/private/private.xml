@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/DRAGKOZ/Documents/NetBeansProjects/acme_Shop_MVC/src/views/ViewPoveedores.java</file>
-            <file>file:/C:/Users/DRAGKOZ/Documents/NetBeansProjects/acme_Shop_MVC/src/views/ViewMain.java</file>
+            <file>file:/C:/Users/DRAGKOZ/Documents/NetBeansProjects/acme_Shop_MVC/src/controllers/ControllerProveedores.java</file>
+            <file>file:/C:/Users/DRAGKOZ/Documents/NetBeansProjects/acme_Shop_MVC/src/models/ModelProveedores.java</file>
+            <file>file:/C:/Users/DRAGKOZ/Documents/NetBeansProjects/acme_Shop_MVC/src/views/ViewProveedores.java</file>
+            <file>file:/C:/Users/DRAGKOZ/Documents/NetBeansProjects/acme_Shop_MVC/src/models/Addchofer.java</file>
         </group>
     </open-files>
 </project-private>
