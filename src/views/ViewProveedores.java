@@ -40,12 +40,10 @@ public class ViewProveedores extends javax.swing.JPanel {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -57,6 +55,8 @@ public class ViewProveedores extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jLabel11 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -136,10 +136,6 @@ public class ViewProveedores extends javax.swing.JPanel {
         add(jTextField3);
         jTextField3.setBounds(95, 65, 250, 21);
 
-        jTextField5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField5);
-        jTextField5.setBounds(95, 94, 40, 21);
-
         jTextField6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         add(jTextField6);
         jTextField6.setBounds(210, 94, 135, 21);
@@ -156,13 +152,9 @@ public class ViewProveedores extends javax.swing.JPanel {
         add(jTextField9);
         jTextField9.setBounds(95, 175, 250, 21);
 
-        jTextField10.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField10);
-        jTextField10.setBounds(95, 202, 143, 21);
-
         jTextField11.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         add(jTextField11);
-        jTextField11.setBounds(93, 231, 143, 21);
+        jTextField11.setBounds(100, 230, 143, 21);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -206,7 +198,7 @@ public class ViewProveedores extends javax.swing.JPanel {
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         add(jPanel2);
@@ -279,6 +271,16 @@ public class ViewProveedores extends javax.swing.JPanel {
         add(jPanel3);
         jPanel3.setBounds(0, 270, 345, 65);
 
+        jFormattedTextField2.setForeground(new java.awt.Color(0, 0, 102));
+        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+        add(jFormattedTextField2);
+        jFormattedTextField2.setBounds(100, 90, 30, 20);
+
+        jFormattedTextField1.setForeground(new java.awt.Color(0, 0, 102));
+        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+        add(jFormattedTextField1);
+        jFormattedTextField1.setBounds(100, 200, 140, 20);
+
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
@@ -301,6 +303,8 @@ public class ViewProveedores extends javax.swing.JPanel {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -315,11 +319,9 @@ public class ViewProveedores extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
