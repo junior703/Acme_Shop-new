@@ -42,7 +42,7 @@ public class ControllerProveedores implements ActionListener{
 
     public void Conectar() {
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost/acme_shop", "root", "8875");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost/acme_shop", "root", "7890");
             st = conexion.createStatement();
 
             rs = st.executeQuery("Select * from proveedor");
