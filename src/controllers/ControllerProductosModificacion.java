@@ -14,8 +14,8 @@ import models.ModelProductosModificacion;
  * @author Bnc
  */
 public class ControllerProductosModificacion  implements ActionListener{
-   ViewProductosModificacion viewProductosModificacion;
-    ModelProductosModificacion modelProductosModificacion;
+   private final ViewProductosModificacion viewProductosModificacion;
+    private final ModelProductosModificacion modelProductosModificacion;
     
     
     public ControllerProductosModificacion(ViewProductosModificacion viewProductosModificacion, ModelProductosModificacion modelProductosModificacion) {
@@ -26,6 +26,11 @@ public class ControllerProductosModificacion  implements ActionListener{
           this.viewProductosModificacion.jbanterior.addActionListener(this);
           this.viewProductosModificacion.jbsiguiente.addActionListener(this); 
               this.viewProductosModificacion.jbultimo.addActionListener(this); 
+               this.viewProductosModificacion.jbagregar.addActionListener(this);  
+          this.viewProductosModificacion.jbborrar.addActionListener(this);
+          this.viewProductosModificacion.jbeditar.addActionListener(this); 
+              this.viewProductosModificacion.jbguadar.addActionListener(this); 
+              initView();
     }
 
      public void actionPerformed(ActionEvent g) {
@@ -40,6 +45,9 @@ public class ControllerProductosModificacion  implements ActionListener{
         }
         else if (g.getSource() == viewProductosModificacion.jbultimo){
             lastButton();
+        }
+        else if (g.getSource() == viewProductosModificacion.jbagregar){
+            addRecordButton();
         }
     }
     
@@ -66,6 +74,16 @@ public class ControllerProductosModificacion  implements ActionListener{
         modelProductosModificacion.setValues();
         showValues();
     }
+      
+    private void addRecordButton() {       
+          viewProductosModificacion.jTidproducto.setText("");
+        viewProductosModificacion.jtproducto.setText("");
+        viewProductosModificacion.jtdescricion.setText("");
+        viewProductosModificacion.jtpreciocompra.setText("");
+        viewProductosModificacion.jtprecioventa.setText("");
+          viewProductosModificacion.jtexistencias.setText("");
+    }
+    
     
     private void showValues() {
         

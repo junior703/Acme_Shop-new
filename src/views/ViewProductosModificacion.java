@@ -46,10 +46,10 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         jbprimero = new javax.swing.JButton();
         jbanterior = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jbagregar = new javax.swing.JButton();
+        jbborrar = new javax.swing.JButton();
+        jbguadar = new javax.swing.JButton();
+        jbeditar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -221,55 +221,60 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Botton", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 12), new java.awt.Color(0, 0, 153)))); // NOI18N
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr2.png"))); // NOI18N
-        jButton1.setText("Agregar");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setIconTextGap(-3);
-        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr3.png"))); // NOI18N
-        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr1.png"))); // NOI18N
-        jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbagregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr2.png"))); // NOI18N
+        jbagregar.setText("Agregar");
+        jbagregar.setBorder(null);
+        jbagregar.setBorderPainted(false);
+        jbagregar.setContentAreaFilled(false);
+        jbagregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbagregar.setIconTextGap(-3);
+        jbagregar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr3.png"))); // NOI18N
+        jbagregar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr1.png"))); // NOI18N
+        jbagregar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbagregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbagregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbagregarActionPerformed(evt);
+            }
+        });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del2.png"))); // NOI18N
-        jButton2.setText("Borrar");
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setIconTextGap(-3);
-        jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del3.png"))); // NOI18N
-        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del1.png"))); // NOI18N
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbborrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del2.png"))); // NOI18N
+        jbborrar.setText("Borrar");
+        jbborrar.setBorder(null);
+        jbborrar.setBorderPainted(false);
+        jbborrar.setContentAreaFilled(false);
+        jbborrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbborrar.setIconTextGap(-3);
+        jbborrar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del3.png"))); // NOI18N
+        jbborrar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del1.png"))); // NOI18N
+        jbborrar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbborrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav2.png"))); // NOI18N
-        jButton3.setText("Save");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setIconTextGap(-3);
-        jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav3.png"))); // NOI18N
-        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav1.png"))); // NOI18N
-        jButton3.setVerifyInputWhenFocusTarget(false);
-        jButton3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbguadar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav2.png"))); // NOI18N
+        jbguadar.setText("Save");
+        jbguadar.setBorder(null);
+        jbguadar.setBorderPainted(false);
+        jbguadar.setContentAreaFilled(false);
+        jbguadar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbguadar.setIconTextGap(-3);
+        jbguadar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav3.png"))); // NOI18N
+        jbguadar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav1.png"))); // NOI18N
+        jbguadar.setVerifyInputWhenFocusTarget(false);
+        jbguadar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbguadar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed2.png"))); // NOI18N
-        jButton4.setText("Editar");
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setIconTextGap(-3);
-        jButton4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed3.png"))); // NOI18N
-        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed1.png"))); // NOI18N
-        jButton4.setVerifyInputWhenFocusTarget(false);
-        jButton4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbeditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed2.png"))); // NOI18N
+        jbeditar.setText("Editar");
+        jbeditar.setBorder(null);
+        jbeditar.setBorderPainted(false);
+        jbeditar.setContentAreaFilled(false);
+        jbeditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbeditar.setIconTextGap(-3);
+        jbeditar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed3.png"))); // NOI18N
+        jbeditar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed1.png"))); // NOI18N
+        jbeditar.setVerifyInputWhenFocusTarget(false);
+        jbeditar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbeditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -279,29 +284,24 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
                 .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton1)
+                        .addComponent(jbagregar)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addContainerGap())))
+                            .addComponent(jbborrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbguadar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jbeditar, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(jbagregar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(jbborrar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(jbguadar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
+                .addComponent(jbeditar)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -340,12 +340,12 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbsiguienteActionPerformed
 
+    private void jbagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbagregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbagregarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -356,7 +356,11 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     public javax.swing.JTextField jTidproducto;
+    public javax.swing.JButton jbagregar;
     public javax.swing.JButton jbanterior;
+    public javax.swing.JButton jbborrar;
+    public javax.swing.JButton jbeditar;
+    public javax.swing.JButton jbguadar;
     public javax.swing.JButton jbprimero;
     public javax.swing.JButton jbsiguiente;
     public javax.swing.JButton jbultimo;

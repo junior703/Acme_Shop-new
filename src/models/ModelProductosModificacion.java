@@ -109,38 +109,56 @@ public class ModelProductosModificacion {
     }
     
       public void initValues() {
-        String sql = "SELECT id_producto, producto, descripcion, precio_compra, precio_venta, existencias FROM productos";
-        connection.executeQuery(sql);
+    //    String sql = "SELECT id_producto, producto, descripcion, precio_compra, precio_venta, existencias FROM productos";
+         connection.executeQuery("SELECT id_producto,  producto,  descripcion,  precio_compra,  precio_venta,  existencias FROM productos;");
         connection.moveNext();
+        setValues();
     }
     
     public void setValues() {
-        idproductos = connection.getInteger("id_producto");
-        productos= connection.getString("producto");
-        Descripcion = connection.getString("descripcion");
-        preciocompra=(connection.getDouble("precio_compra"));
-          precioventa=(connection.getDouble("precio_venta"));
-         existencias = connection.getInteger("existencias");
+       this. idproductos = connection.getInteger("id_producto");
+       this. productos= connection.getString("producto");
+       this. Descripcion = connection.getString("descripcion");
+       this. preciocompra=(connection.getDouble("precio_compra"));
+          this.precioventa=(connection.getDouble("precio_venta"));
+         this.existencias = connection.getInteger("existencias");
     }
     
     public void moveFirst() {
         connection.moveFirst();
+         setValues();
     }
     
     public void movePrevious() {
         connection.movePrevious();
+         setValues();
     }
     
     public void moveNext() {
         connection.moveNext();
+         setValues();
     }
     
     public void moveLast() {
         connection.moveLast();
+         setValues();
     }
 
-    /**
-     * @return the precioventa
-     */
+ public void addRecord(String producto, String descripcion, double precio_compra, double precio_venta, int existencias) {
+         String add =  "INSERT INTO productos ( `producto`, `descripcion`,`precio_compra`, `precio_venta`, existencias`)"+ "VALUES ('"+productos+"', '"+Descripcion+"', ' "+preciocompra+"' ,' "+ precioventa +" ','"+existencias +"' );";
+        connection.executeUpdate(add);
+        initValues();
+    }
+ public void alterRecord(String producto, String descripcion, double precio_compra, double precio_venta, int existencias) {
+        String alter = "UPDATE productos SET producto ='"+productos+"', descripcion ='"+Descripcion+"', precio_compra ='"+preciocompra+" ' ,precio_venta='"+precioventa+"', existencias='"+existencias+"'," + "WHERE id_contacto =" +idproductos;
+        connection.executeUpdate(alter);    //String alter = "UPDATE contactos SET nombre ='"+name+"', telefono ='"+phone+"', email ='"+mail+"'" + "WHERE id_contacto =" +idContact;
+        initValues();
+    }
+    
+    public void deleteRecord(int idContact) {
+        String delete = "DELETE FROM productos WHERE id_productos=" +idproductos;
+        connection.executeUpdate(delete);
+        initValues();
+    }
    
 }
