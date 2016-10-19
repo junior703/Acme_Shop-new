@@ -37,6 +37,7 @@ public class ControllerProveedores implements ActionListener{
         this.viewProveedores.jbtn_previus.addActionListener(this);
         this.viewProveedores.jbtn_next.addActionListener(this);
         this.viewProveedores.jbtn_last.addActionListener(this);
+        Conectar();
     }
 
     public void Conectar() {
