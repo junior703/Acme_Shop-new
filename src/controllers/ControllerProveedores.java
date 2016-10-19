@@ -26,7 +26,7 @@ public class ControllerProveedores implements ActionListener{
     private Statement st;
     private ResultSet rs;
     
-    public ControllerProveedores(ModelProveedores modelProveedores, ViewProveedores viewProveedores){
+    public ControllerProveedores(ViewProveedores viewProveedores, ModelProveedores modelProveedores){
         this.modelProveedores = modelProveedores;
         this.viewProveedores = viewProveedores;
         this.viewProveedores.jbtn_Clean.addActionListener(this);
