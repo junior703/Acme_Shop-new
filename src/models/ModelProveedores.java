@@ -10,5 +10,14 @@ package models;
  * @author DRAGKOZ
  */
 public class ModelProveedores {
-    
+    private String nombre;
+    private String rfc;
+    private String calle;
+    private int no;
+    private String colonia;
+    private String ciudad;
+    private String estado;
+    private String contacto;
+    private int telefono;
+    private String email;
 }
