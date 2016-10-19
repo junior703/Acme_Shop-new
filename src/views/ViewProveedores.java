@@ -27,64 +27,65 @@ public class ViewProveedores extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jlb_Nombre = new javax.swing.JLabel();
+        jlb_RFC = new javax.swing.JLabel();
+        jlb_Calle = new javax.swing.JLabel();
+        jlb_No = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
+        jlb_Ciudad = new javax.swing.JLabel();
+        jlb_Estado = new javax.swing.JLabel();
+        jlb_Contacto = new javax.swing.JLabel();
+        jlb_Telefono = new javax.swing.JLabel();
+        jlb_EMail = new javax.swing.JLabel();
+        jtf_Nombre = new javax.swing.JTextField();
+        jtf_RFC = new javax.swing.JTextField();
+        jtf_Calle = new javax.swing.JTextField();
+        jtf_Colonia = new javax.swing.JTextField();
+        jtf_Ciudad = new javax.swing.JTextField();
+        jtf_Estado = new javax.swing.JTextField();
+        jtf_Contacto = new javax.swing.JTextField();
+        jtf_EMail = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        jbtn_Clean = new javax.swing.JButton();
+        jbtn_search = new javax.swing.JButton();
+        jbtn_Save = new javax.swing.JButton();
+        jbtn_Delete = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jbtn_Fist = new javax.swing.JButton();
+        jbtn_previus = new javax.swing.JButton();
+        jbtn_next = new javax.swing.JButton();
+        jbtn_last = new javax.swing.JButton();
+        jtf_No = new javax.swing.JFormattedTextField();
+        jtf_Telefono = new javax.swing.JFormattedTextField();
         jLabel11 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(424, 324));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel1.setText("NOMBRE:");
-        add(jLabel1);
-        jLabel1.setBounds(24, 13, 67, 17);
+        jlb_Nombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_Nombre.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_Nombre.setText("NOMBRE:");
+        add(jlb_Nombre);
+        jlb_Nombre.setBounds(24, 13, 67, 17);
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setText("RFC:");
-        add(jLabel2);
-        jLabel2.setBounds(58, 40, 33, 17);
+        jlb_RFC.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_RFC.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_RFC.setText("RFC:");
+        add(jlb_RFC);
+        jlb_RFC.setBounds(58, 40, 33, 17);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel3.setText("CALLE:");
-        add(jLabel3);
-        jLabel3.setBounds(43, 67, 48, 17);
+        jlb_Calle.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_Calle.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_Calle.setText("CALLE:");
+        add(jlb_Calle);
+        jlb_Calle.setBounds(43, 67, 48, 17);
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel4.setText("NO.");
-        add(jLabel4);
-        jLabel4.setBounds(66, 96, 25, 17);
+        jlb_No.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_No.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_No.setText("NO.");
+        add(jlb_No);
+        jlb_No.setBounds(66, 96, 25, 17);
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
@@ -92,87 +93,87 @@ public class ViewProveedores extends javax.swing.JPanel {
         add(jLabel5);
         jLabel5.setBounds(139, 96, 67, 17);
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel6.setText("CIUDAD:");
-        add(jLabel6);
-        jLabel6.setBounds(34, 123, 57, 17);
+        jlb_Ciudad.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_Ciudad.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_Ciudad.setText("CIUDAD:");
+        add(jlb_Ciudad);
+        jlb_Ciudad.setBounds(34, 123, 57, 17);
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel7.setText("ESTADO:");
-        add(jLabel7);
-        jLabel7.setBounds(31, 150, 60, 17);
+        jlb_Estado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_Estado.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_Estado.setText("ESTADO:");
+        add(jlb_Estado);
+        jlb_Estado.setBounds(31, 150, 60, 17);
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("CONTACTO:");
-        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        add(jLabel8);
-        jLabel8.setBounds(10, 177, 81, 17);
+        jlb_Contacto.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_Contacto.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_Contacto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlb_Contacto.setText("CONTACTO:");
+        jlb_Contacto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        add(jlb_Contacto);
+        jlb_Contacto.setBounds(10, 177, 81, 17);
 
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel9.setText("TELEFONO:");
-        add(jLabel9);
-        jLabel9.setBounds(12, 204, 79, 17);
+        jlb_Telefono.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_Telefono.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_Telefono.setText("TELEFONO:");
+        add(jlb_Telefono);
+        jlb_Telefono.setBounds(12, 204, 79, 17);
 
-        jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel10.setText("E-MAIL:");
-        add(jLabel10);
-        jLabel10.setBounds(37, 233, 52, 17);
+        jlb_EMail.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_EMail.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_EMail.setText("E-MAIL:");
+        add(jlb_EMail);
+        jlb_EMail.setBounds(37, 233, 52, 17);
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField1);
-        jTextField1.setBounds(95, 11, 250, 21);
+        jtf_Nombre.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_Nombre);
+        jtf_Nombre.setBounds(95, 11, 250, 21);
 
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField2);
-        jTextField2.setBounds(95, 38, 250, 21);
+        jtf_RFC.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_RFC);
+        jtf_RFC.setBounds(95, 38, 250, 21);
 
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField3);
-        jTextField3.setBounds(95, 65, 250, 21);
+        jtf_Calle.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_Calle);
+        jtf_Calle.setBounds(95, 65, 250, 21);
 
-        jTextField6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField6);
-        jTextField6.setBounds(210, 94, 135, 21);
+        jtf_Colonia.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_Colonia);
+        jtf_Colonia.setBounds(210, 94, 135, 21);
 
-        jTextField7.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField7);
-        jTextField7.setBounds(95, 121, 143, 21);
+        jtf_Ciudad.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_Ciudad);
+        jtf_Ciudad.setBounds(95, 121, 143, 21);
 
-        jTextField8.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField8);
-        jTextField8.setBounds(95, 148, 143, 21);
+        jtf_Estado.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_Estado);
+        jtf_Estado.setBounds(95, 148, 143, 21);
 
-        jTextField9.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField9);
-        jTextField9.setBounds(95, 175, 250, 21);
+        jtf_Contacto.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_Contacto);
+        jtf_Contacto.setBounds(95, 175, 250, 21);
 
-        jTextField11.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add(jTextField11);
-        jTextField11.setBounds(100, 230, 143, 21);
+        jtf_EMail.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_EMail);
+        jtf_EMail.setBounds(100, 230, 143, 21);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/limpiar.png"))); // NOI18N
-        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_Clean.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/limpiar.png"))); // NOI18N
+        jbtn_Clean.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jbtn_Clean.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/buscar.png"))); // NOI18N
-        jButton5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/buscar.png"))); // NOI18N
+        jbtn_search.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jbtn_search.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/guardar.png"))); // NOI18N
-        jButton6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_Save.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/guardar.png"))); // NOI18N
+        jbtn_Save.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jbtn_Save.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/eliminar.png"))); // NOI18N
-        jButton7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_Delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/eliminar.png"))); // NOI18N
+        jbtn_Delete.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jbtn_Delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -181,23 +182,23 @@ public class ViewProveedores extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbtn_Clean, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_search, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_Save, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_Delete, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtn_Clean, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtn_search, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtn_Save, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtn_Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(77, Short.MAX_VALUE))
         );
 
@@ -206,41 +207,41 @@ public class ViewProveedores extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 102));
-        jButton2.setText("|<");
-        jButton2.setActionCommand("");
-        jButton2.setBorder(null);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_Fist.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jbtn_Fist.setForeground(new java.awt.Color(0, 0, 102));
+        jbtn_Fist.setText("|<");
+        jbtn_Fist.setActionCommand("");
+        jbtn_Fist.setBorder(null);
+        jbtn_Fist.setContentAreaFilled(false);
+        jbtn_Fist.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_Fist.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 102));
-        jButton3.setText("<");
-        jButton3.setActionCommand("");
-        jButton3.setBorder(null);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_previus.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jbtn_previus.setForeground(new java.awt.Color(0, 0, 102));
+        jbtn_previus.setText("<");
+        jbtn_previus.setActionCommand("");
+        jbtn_previus.setBorder(null);
+        jbtn_previus.setContentAreaFilled(false);
+        jbtn_previus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_previus.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 102));
-        jButton4.setText(">");
-        jButton4.setActionCommand("");
-        jButton4.setBorder(null);
-        jButton4.setContentAreaFilled(false);
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_next.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jbtn_next.setForeground(new java.awt.Color(0, 0, 102));
+        jbtn_next.setText(">");
+        jbtn_next.setActionCommand("");
+        jbtn_next.setBorder(null);
+        jbtn_next.setContentAreaFilled(false);
+        jbtn_next.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_next.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(0, 0, 102));
-        jButton8.setText(">|");
-        jButton8.setActionCommand("");
-        jButton8.setBorder(null);
-        jButton8.setContentAreaFilled(false);
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_last.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jbtn_last.setForeground(new java.awt.Color(0, 0, 102));
+        jbtn_last.setText(">|");
+        jbtn_last.setActionCommand("");
+        jbtn_last.setBorder(null);
+        jbtn_last.setContentAreaFilled(false);
+        jbtn_last.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_last.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -248,38 +249,38 @@ public class ViewProveedores extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtn_Fist, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtn_previus, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbtn_Fist, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_previus, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
         add(jPanel3);
         jPanel3.setBounds(0, 270, 345, 65);
 
-        jFormattedTextField2.setForeground(new java.awt.Color(0, 0, 102));
-        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        add(jFormattedTextField2);
-        jFormattedTextField2.setBounds(100, 90, 30, 20);
+        jtf_No.setForeground(new java.awt.Color(0, 0, 102));
+        jtf_No.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+        add(jtf_No);
+        jtf_No.setBounds(100, 90, 30, 20);
 
-        jFormattedTextField1.setForeground(new java.awt.Color(0, 0, 102));
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(100, 200, 140, 20);
+        jtf_Telefono.setForeground(new java.awt.Color(0, 0, 102));
+        jtf_Telefono.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+        add(jtf_Telefono);
+        jtf_Telefono.setBounds(100, 200, 140, 20);
 
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -295,36 +296,36 @@ public class ViewProveedores extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    public javax.swing.JLabel jLabel11;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JPanel jPanel2;
+    public javax.swing.JPanel jPanel3;
+    public javax.swing.JButton jbtn_Clean;
+    public javax.swing.JButton jbtn_Delete;
+    public javax.swing.JButton jbtn_Fist;
+    public javax.swing.JButton jbtn_Save;
+    public javax.swing.JButton jbtn_last;
+    public javax.swing.JButton jbtn_next;
+    public javax.swing.JButton jbtn_previus;
+    public javax.swing.JButton jbtn_search;
+    public javax.swing.JLabel jlb_Calle;
+    public javax.swing.JLabel jlb_Ciudad;
+    public javax.swing.JLabel jlb_Contacto;
+    public javax.swing.JLabel jlb_EMail;
+    public javax.swing.JLabel jlb_Estado;
+    public javax.swing.JLabel jlb_No;
+    public javax.swing.JLabel jlb_Nombre;
+    public javax.swing.JLabel jlb_RFC;
+    public javax.swing.JLabel jlb_Telefono;
+    public javax.swing.JTextField jtf_Calle;
+    public javax.swing.JTextField jtf_Ciudad;
+    public javax.swing.JTextField jtf_Colonia;
+    public javax.swing.JTextField jtf_Contacto;
+    public javax.swing.JTextField jtf_EMail;
+    public javax.swing.JTextField jtf_Estado;
+    public javax.swing.JFormattedTextField jtf_No;
+    public javax.swing.JTextField jtf_Nombre;
+    public javax.swing.JTextField jtf_RFC;
+    public javax.swing.JFormattedTextField jtf_Telefono;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,11 @@
  */
 package models;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
+
 /**
  *
  * @author DRAGKOZ
@@ -20,4 +25,5 @@ public class ModelProveedores {
     private String contacto;
     private int telefono;
     private String email;
+    
 }
