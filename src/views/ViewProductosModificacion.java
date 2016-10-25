@@ -50,6 +50,7 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         jbborrar = new javax.swing.JButton();
         jbguadar = new javax.swing.JButton();
         jbeditar = new javax.swing.JButton();
+        jbtn_test = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -57,7 +58,6 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(500, 500));
         setLayout(null);
 
-        jPanel1.setBackground(null);
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "PRODUCTO", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 12), new java.awt.Color(0, 0, 153))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -209,7 +209,7 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
                 .addComponent(jbsiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jbultimo, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,19 +284,22 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         jbeditar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jbeditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
+        jbtn_test.setText("test");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jbagregar)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jbborrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbguadar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jbeditar, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jbeditar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbtn_test, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -310,11 +313,13 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
                 .addComponent(jbguadar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbeditar)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(jbtn_test)
+                .addGap(24, 24, 24))
         );
 
         add(jPanel3);
-        jPanel3.setBounds(498, 6, 102, 312);
+        jPanel3.setBounds(498, 6, 105, 370);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
         add(jLabel7);
@@ -353,6 +358,7 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
     public javax.swing.JButton jbguadar;
     public javax.swing.JButton jbprimero;
     public javax.swing.JButton jbsiguiente;
+    public javax.swing.JButton jbtn_test;
     public javax.swing.JButton jbultimo;
     public javax.swing.JTextField jtdescricion;
     public javax.swing.JTextField jtexistencias;

@@ -22,15 +22,16 @@ public class ControllerProductosModificacion  implements ActionListener{
         this.viewProductosModificacion = viewProductosModificacion;
         this.modelProductosModificacion = modelProductosModificacion;
         
-            this.viewProductosModificacion.jbprimero.addActionListener(this);  
-          this.viewProductosModificacion.jbanterior.addActionListener(this);
-          this.viewProductosModificacion.jbsiguiente.addActionListener(this); 
-              this.viewProductosModificacion.jbultimo.addActionListener(this); 
-               this.viewProductosModificacion.jbagregar.addActionListener(this);  
-          this.viewProductosModificacion.jbborrar.addActionListener(this);
-          this.viewProductosModificacion.jbeditar.addActionListener(this); 
-              this.viewProductosModificacion.jbguadar.addActionListener(this); 
-              initView();
+        this.viewProductosModificacion.jbprimero.addActionListener(this);  
+        this.viewProductosModificacion.jbanterior.addActionListener(this);
+        this.viewProductosModificacion.jbsiguiente.addActionListener(this); 
+        this.viewProductosModificacion.jbultimo.addActionListener(this); 
+        this.viewProductosModificacion.jbagregar.addActionListener(this);  
+        this.viewProductosModificacion.jbborrar.addActionListener(this);
+        this.viewProductosModificacion.jbeditar.addActionListener(this); 
+        this.viewProductosModificacion.jbguadar.addActionListener(this); 
+        this.viewProductosModificacion.jbtn_test.addActionListener(this);
+        initView();
     }
 
      public void actionPerformed(ActionEvent g) {
@@ -48,6 +49,9 @@ public class ControllerProductosModificacion  implements ActionListener{
         }
         else if (g.getSource() == viewProductosModificacion.jbagregar){
             addRecordButton();
+        }
+        else if (g.getSource() == viewProductosModificacion.jbtn_test){
+            //codigo
         }
     }
     
