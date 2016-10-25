@@ -6,16 +6,19 @@
 
 package controllers;
 
-import models.ModelCatalogosProveedores;
-import views.ViewCatalogosProveedores;
+
+import models.ModelIniciarSeccion;
+import views.ViewIniciarSeccion;
 
 /**
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public class ControllerCatalogosProveedores {
+public class ControllerIniciarSeccion {
 
-    public ControllerCatalogosProveedores(ViewCatalogosProveedores viewCatalogosProveedores, ModelCatalogosProveedores modelCatalogosProveedores) {
+    public ControllerIniciarSeccion(ViewIniciarSeccion viewIniciarSeccion, ModelIniciarSeccion modelIniciarSeccion) {
     }
+
+   
 
 }

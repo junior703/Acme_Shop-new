@@ -28,14 +28,13 @@ public class ViewMain extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuBar1 = new javax.swing.JMenuBar();
+        jMcatalogos = new javax.swing.JMenu();
+        jMiniciarsecion = new javax.swing.JMenuItem();
+        jmusuario = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMprovedores = new javax.swing.JMenuItem();
         jMclientes = new javax.swing.JMenuItem();
         jMproductos = new javax.swing.JMenuItem();
-        jMcatalogos = new javax.swing.JMenu();
-        jMcatalogoClientes = new javax.swing.JMenuItem();
-        jMcatalogoProductos = new javax.swing.JMenuItem();
-        jMcatalogoProveedores = new javax.swing.JMenuItem();
         jMoperaciones = new javax.swing.JMenu();
         jMoperacionesCompras = new javax.swing.JMenuItem();
         jMoperacionVentas = new javax.swing.JMenuItem();
@@ -49,9 +48,24 @@ public class ViewMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Archivo");
+        jMcatalogos.setText("Archivos");
+
+        jMiniciarsecion.setText("Iniciar Session");
+        jMcatalogos.add(jMiniciarsecion);
+
+        jmusuario.setText("Usuarios");
+        jMcatalogos.add(jmusuario);
+
+        jMenuBar1.add(jMcatalogos);
+
+        jMenu1.setText("Catalogos");
 
         jMprovedores.setText("Provedores");
+        jMprovedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMprovedoresActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMprovedores);
 
         jMclientes.setText("Clientes");
@@ -61,19 +75,6 @@ public class ViewMain extends javax.swing.JFrame {
         jMenu1.add(jMproductos);
 
         jMenuBar1.add(jMenu1);
-
-        jMcatalogos.setText("Catalogos");
-
-        jMcatalogoClientes.setText("Clientes");
-        jMcatalogos.add(jMcatalogoClientes);
-
-        jMcatalogoProductos.setText("Productos");
-        jMcatalogos.add(jMcatalogoProductos);
-
-        jMcatalogoProveedores.setText("Proveedores");
-        jMcatalogos.add(jMcatalogoProveedores);
-
-        jMenuBar1.add(jMcatalogos);
 
         jMoperaciones.setText("Operaciones");
 
@@ -132,6 +133,10 @@ public class ViewMain extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMreportesProductosActionPerformed
 
+    private void jMprovedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMprovedoresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMprovedoresActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -170,13 +175,11 @@ public class ViewMain extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenu jMacercade;
-    public javax.swing.JMenuItem jMcatalogoClientes;
-    public javax.swing.JMenuItem jMcatalogoProductos;
-    public javax.swing.JMenuItem jMcatalogoProveedores;
     public javax.swing.JMenu jMcatalogos;
     public javax.swing.JMenuItem jMclientes;
     public javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenuItem jMiniciarsecion;
     public javax.swing.JMenuItem jMoperacionVentas;
     public javax.swing.JMenu jMoperaciones;
     public javax.swing.JMenuItem jMoperacionesCompras;
@@ -188,5 +191,6 @@ public class ViewMain extends javax.swing.JFrame {
     public javax.swing.JMenuItem jMreportesProductos;
     public javax.swing.JMenuItem jMreportesProveedores;
     public javax.swing.JMenuItem jMreportesVentas;
+    public javax.swing.JMenuItem jmusuario;
     // End of variables declaration//GEN-END:variables
 }

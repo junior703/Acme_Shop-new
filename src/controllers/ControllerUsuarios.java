@@ -6,17 +6,21 @@
 
 package controllers;
 
-import models.ModelCatalogosClientes;
-import views.ViewCatalogosClientes;
+import models.ModelUsuarios;
+import views.ViewUsuarios;
+
+
+
 
 /**
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public class ControllerCatalogosClientes {
+public class ControllerUsuarios {
 
-    public ControllerCatalogosClientes(ViewCatalogosClientes viewCatalogosClientes, ModelCatalogosClientes modelCatalogosClientes) {
-    
+    public ControllerUsuarios(ViewUsuarios viewUsuarios, ModelUsuarios modelUsuarios) {
     }
 
-}
+    }
+
+

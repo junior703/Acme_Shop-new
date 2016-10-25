@@ -30,9 +30,8 @@ ModelMain modelmain;
                  
                 this.viewmain.jMacercade.addActionListener( this);
                 
-                   this.viewmain.jMcatalogoClientes.addActionListener( this);
-          this.viewmain.jMcatalogoProductos.addActionListener( this);
-                this.viewmain.jMcatalogoProveedores.addActionListener( this);
+                  this.viewmain.jmusuario.addActionListener(this);
+                  this.viewmain.jMiniciarsecion.addActionListener(this);
                 
                 this.viewmain.jMoperacionVentas.addActionListener( this);             
           this.viewmain.jMoperacionesCompras.addActionListener( this);
@@ -59,12 +58,10 @@ jmiProvedores();
           jMclientes();
    } else if (ae.getSource ()==viewmain.jMacercade){
        jMacercade();
-   } else if (ae.getSource ()==viewmain.jMcatalogoClientes){
-       jMcatalogoClientes();
-   } else if (ae.getSource ()==viewmain.jMcatalogoProductos){
-       jMcatalogoProductos();
-   } else if (ae.getSource ()==viewmain.jMcatalogoProveedores){
-       jMcatalogoProveedores();
+   } else if (ae.getSource ()==viewmain.jMiniciarsecion){
+       jMiniciarsecion();
+   } else if (ae.getSource ()==viewmain.jmusuario){
+       jmusuario();
    }else if (ae.getSource ()==viewmain.jMoperacionVentas){
        jMoperacionVentas();
    }else if (ae.getSource ()==viewmain.jMoperacionesCompras){
@@ -103,53 +100,49 @@ jmiProvedores();
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-           public void jMcatalogoClientes(){
+           public void jMiniciarsecion(){
         this.viewmain.setContentPane(views[4]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-            public void jMcatalogoProductos(){
+            public void jmusuario(){
         this.viewmain.setContentPane(views[5]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-             public void jMcatalogoProveedores(){
+             
+              public void jMoperacionVentas(){
         this.viewmain.setContentPane(views[6]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-              public void jMoperacionVentas(){
+               public void jMoperacionesCompras(){
         this.viewmain.setContentPane(views[7]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-               public void jMoperacionesCompras(){
+                public void jMreportesClientes(){
         this.viewmain.setContentPane(views[8]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-                public void jMreportesClientes(){
+                 public void jMreportesCompras(){
         this.viewmain.setContentPane(views[9]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-                 public void jMreportesCompras(){
+                  public void jMreportesProductos(){
         this.viewmain.setContentPane(views[10]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-                  public void jMreportesProductos(){
+                   public void jMreportesProveedores(){
         this.viewmain.setContentPane(views[11]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-                   public void jMreportesProveedores(){
-        this.viewmain.setContentPane(views[12]);
-        this.viewmain.revalidate();
-        this.viewmain.repaint();
-    }
                     public void jMreportesVentas(){
-        this.viewmain.setContentPane(views[13]);
+        this.viewmain.setContentPane(views[12]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }

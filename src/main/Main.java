@@ -30,22 +30,21 @@ public class Main {
            private static ViewProveedores viewProveedores;
     private static ModelProveedores modelProveedores;
     private static ControllerProveedores controllerProveedores;
+    ///********************************************************************//
     
-               private static ViewCatalogosClientes viewCatalogosClientes;
-    private static ModelCatalogosClientes modelCatalogosClientes;
-    private static ControllerCatalogosClientes controllerCatalogosClientes;
+               private static ViewIniciarSeccion viewIniciarSeccion;
+    private static ModelIniciarSeccion modelIniciarSeccion;
+    private static ControllerIniciarSeccion controllerIniciarSeccion;
     
-     private static ViewCatalogosProductos viewCatalogosProductos;
-    private static ModelCatalogosProductos  modelCatalogosProductos ;
-    private static ControllerCatalogosProductos  controllerCatalogosProductos ;
-    
-     private static ViewCatalogosProveedores viewCatalogosProveedores;
-    private static ModelCatalogosProveedores  modelCatalogosProveedores ;
-    private static ControllerCatalogosProveedores  controllerCatalogosProveedores ;
+     private static ViewUsuarios viewUsuarios;
+    private static ModelUsuarios  modelUsuarios ;
+    private static ControllerUsuarios  controllerUsuarios ;
+      ///********************************************************************//
     
     private static ViewAcercaDe viewAcercaDe;
     private static ModelAcercaDe  modelAcercaDe ;
     private static ControllerAcercaDe  controllerAcercaDe ;
+      ///********************************************************************//
     
     private static ViewOperacionesCompras viewOperacionesCompras;
     private static ModelOperacionesCompras  modelOperacionesCompras;
@@ -54,6 +53,7 @@ public class Main {
     private static ViewOperacionesVentas viewOperacionesVentas;
     private static ModelOperacionesVentas  modelOperacionesVentas;
     private static ControllerOperacionesVentas  controllerOperacionesVentas ;
+      ///********************************************************************//
     
     private static ViewReportesClientes viewReportesClientes;
     private static ModelReportesClientes modelReportesClientes;
@@ -92,17 +92,14 @@ public class Main {
                modelProveedores=new ModelProveedores();
          controllerProveedores=new ControllerProveedores(viewProveedores,modelProveedores);////////////////////////
 
-  viewCatalogosClientes=new  ViewCatalogosClientes();
-        modelCatalogosClientes=new ModelCatalogosClientes();
-  controllerCatalogosClientes=new ControllerCatalogosClientes(viewCatalogosClientes,modelCatalogosClientes);////////////////////////
+  viewIniciarSeccion=new  ViewIniciarSeccion();
+        modelIniciarSeccion=new ModelIniciarSeccion();
+  controllerIniciarSeccion=new ControllerIniciarSeccion(viewIniciarSeccion,modelIniciarSeccion);////////////////////////
   
-  viewCatalogosProductos=new  ViewCatalogosProductos();
-        modelCatalogosProductos=new ModelCatalogosProductos();
-  controllerCatalogosProductos=new ControllerCatalogosProductos(viewCatalogosProductos,modelCatalogosProductos);////////////////////////
    
-  viewCatalogosProveedores=new  ViewCatalogosProveedores();
-        modelCatalogosProveedores=new ModelCatalogosProveedores();
-  controllerCatalogosProveedores=new ControllerCatalogosProveedores(viewCatalogosProveedores,modelCatalogosProveedores);////////////////////////
+  viewUsuarios=new  ViewUsuarios();
+        modelUsuarios=new ModelUsuarios();
+  controllerUsuarios=new ControllerUsuarios(viewUsuarios,modelUsuarios);////////////////////////
     
    viewAcercaDe=new  ViewAcercaDe();
         modelAcercaDe=new ModelAcercaDe();
@@ -141,16 +138,15 @@ public class Main {
   views[1]=viewProveedores;
   views[2]=viewCliente;   
   views[3]=viewAcercaDe;
-  views[4]=viewCatalogosClientes;   
-  views[5]=viewCatalogosProductos;
-  views[6]=viewCatalogosProveedores;   
-  views[7]=viewOperacionesVentas;
-  views[8]=viewOperacionesCompras;   
-  views[9]=viewReportesClientes;
-  views[10]=viewReportesCompras;   
-  views[11]=viewReportesProductos;
-  views[12]=viewReportesProveedores;   
-  views[13]=viewReportesVentas;
+  views[4]=viewIniciarSeccion;   
+  views[5]=viewUsuarios; 
+  views[6]=viewOperacionesVentas;
+  views[7]=viewOperacionesCompras;   
+  views[8]=viewReportesClientes;
+  views[9]=viewReportesCompras;   
+  views[10]=viewReportesProductos;
+  views[11]=viewReportesProveedores;   
+  views[12]=viewReportesVentas;
 
 
   

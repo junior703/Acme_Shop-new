@@ -9,12 +9,12 @@ package views;
  *
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public class ViewCatalogosClientes extends javax.swing.JPanel {
+public class ViewUsuarios extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewCatalogosClientes
+     * Creates new form ViewCatalogosProveedores
      */
-    public ViewCatalogosClientes() {
+    public ViewUsuarios() {
         initComponents();
     }
 
@@ -29,23 +29,23 @@ public class ViewCatalogosClientes extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setText("Ctalogo clientes");
+        jLabel1.setText("catalogos proveedores");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(166, 166, 166)
+                .addGap(178, 178, 178)
                 .addComponent(jLabel1)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(60, 60, 60)
                 .addComponent(jLabel1)
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
