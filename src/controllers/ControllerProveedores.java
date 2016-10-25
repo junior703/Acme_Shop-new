@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package controllers;
-
+//import sax.DBConnection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -25,7 +25,8 @@ public class ControllerProveedores implements ActionListener{
     private Connection conexion;
     private Statement st;
     private ResultSet rs;
-    
+     //  private DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
+       
     public ControllerProveedores(ViewProveedores viewProveedores, ModelProveedores modelProveedores){
         this.modelProveedores = modelProveedores;
         this.viewProveedores = viewProveedores;
@@ -42,11 +43,14 @@ public class ControllerProveedores implements ActionListener{
 
     public void Conectar() {
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost/acme_shop", "root", "7890");
+           conexion = DriverManager.getConnection("jdbclocalhost/acme_shop", "root", "7890");
             st = conexion.createStatement();
 
             rs = st.executeQuery("Select * from proveedor");
 
+             /*String sql = "SELECT nombre, rfc, calle, no, colonia, ciudad, estado,nombe_contacto,telefono,email  FROM productos";
+         connection.executeQuery(sql);
+        connection.moveNext();*/
             rs.next();
             viewProveedores.jtf_Nombre.setText(rs.getString("nombre"));
             viewProveedores.jtf_RFC.setText(rs.getString("rfc"));

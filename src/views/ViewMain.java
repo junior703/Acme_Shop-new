@@ -32,6 +32,20 @@ public class ViewMain extends javax.swing.JFrame {
         jMprovedores = new javax.swing.JMenuItem();
         jMclientes = new javax.swing.JMenuItem();
         jMproductos = new javax.swing.JMenuItem();
+        jMcatalogos = new javax.swing.JMenu();
+        jMcatalogoClientes = new javax.swing.JMenuItem();
+        jMcatalogoProductos = new javax.swing.JMenuItem();
+        jMcatalogoProveedores = new javax.swing.JMenuItem();
+        jMoperaciones = new javax.swing.JMenu();
+        jMoperacionesCompras = new javax.swing.JMenuItem();
+        jMoperacionVentas = new javax.swing.JMenuItem();
+        jMreportes = new javax.swing.JMenu();
+        jMreportesClientes = new javax.swing.JMenuItem();
+        jMreportesProductos = new javax.swing.JMenuItem();
+        jMreportesProveedores = new javax.swing.JMenuItem();
+        jMreportesCompras = new javax.swing.JMenuItem();
+        jMreportesVentas = new javax.swing.JMenuItem();
+        jMacercade = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,6 +62,56 @@ public class ViewMain extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMcatalogos.setText("Catalogos");
+
+        jMcatalogoClientes.setText("Clientes");
+        jMcatalogos.add(jMcatalogoClientes);
+
+        jMcatalogoProductos.setText("Productos");
+        jMcatalogos.add(jMcatalogoProductos);
+
+        jMcatalogoProveedores.setText("Proveedores");
+        jMcatalogos.add(jMcatalogoProveedores);
+
+        jMenuBar1.add(jMcatalogos);
+
+        jMoperaciones.setText("Operaciones");
+
+        jMoperacionesCompras.setText("Compras");
+        jMoperaciones.add(jMoperacionesCompras);
+
+        jMoperacionVentas.setText("Ventas");
+        jMoperaciones.add(jMoperacionVentas);
+
+        jMenuBar1.add(jMoperaciones);
+
+        jMreportes.setText("Reportes");
+
+        jMreportesClientes.setText("Clientes");
+        jMreportes.add(jMreportesClientes);
+
+        jMreportesProductos.setText("Productos");
+        jMreportesProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMreportesProductosActionPerformed(evt);
+            }
+        });
+        jMreportes.add(jMreportesProductos);
+
+        jMreportesProveedores.setText("Proveedores");
+        jMreportes.add(jMreportesProveedores);
+
+        jMreportesCompras.setText("Compras");
+        jMreportes.add(jMreportesCompras);
+
+        jMreportesVentas.setText("Ventas");
+        jMreportes.add(jMreportesVentas);
+
+        jMenuBar1.add(jMreportes);
+
+        jMacercade.setText("Acerca de");
+        jMenuBar1.add(jMacercade);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -58,11 +122,15 @@ public class ViewMain extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 281, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMreportesProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMreportesProductosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMreportesProductosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,6 +158,7 @@ public class ViewMain extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ViewMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -100,10 +169,24 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JMenu jMacercade;
+    public javax.swing.JMenuItem jMcatalogoClientes;
+    public javax.swing.JMenuItem jMcatalogoProductos;
+    public javax.swing.JMenuItem jMcatalogoProveedores;
+    public javax.swing.JMenu jMcatalogos;
     public javax.swing.JMenuItem jMclientes;
     public javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenuItem jMoperacionVentas;
+    public javax.swing.JMenu jMoperaciones;
+    public javax.swing.JMenuItem jMoperacionesCompras;
     public javax.swing.JMenuItem jMproductos;
     public javax.swing.JMenuItem jMprovedores;
+    public javax.swing.JMenu jMreportes;
+    public javax.swing.JMenuItem jMreportesClientes;
+    public javax.swing.JMenuItem jMreportesCompras;
+    public javax.swing.JMenuItem jMreportesProductos;
+    public javax.swing.JMenuItem jMreportesProveedores;
+    public javax.swing.JMenuItem jMreportesVentas;
     // End of variables declaration//GEN-END:variables
 }

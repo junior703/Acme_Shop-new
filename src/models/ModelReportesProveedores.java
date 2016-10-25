@@ -10,6 +10,6 @@ package models;
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public class ModelProductosDetalle {
+public class ModelReportesProveedores {
 
 }

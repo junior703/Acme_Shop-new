@@ -6,10 +6,16 @@
 
 package controllers;
 
+import models.ModelCliente;
+import views.ViewCliente;
+
 /**
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public class ControllerProductosDetalle {
+public class ControllerCliente {
+
+    public ControllerCliente(ViewCliente viewCliente, ModelCliente modelCliente) {
+    }
 
 }
