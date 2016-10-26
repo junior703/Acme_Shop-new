@@ -50,11 +50,13 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         jbborrar = new javax.swing.JButton();
         jbguadar = new javax.swing.JButton();
         jbeditar = new javax.swing.JButton();
-        jBeditar = new javax.swing.JButton();
+        jBsaveeditar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtbledetalle = new javax.swing.JTable();
+        jBuscar = new javax.swing.JButton();
+        jTbuscar = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -283,7 +285,7 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         jbguadar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         jbeditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed2.png"))); // NOI18N
-        jbeditar.setText("Save Edit");
+        jbeditar.setText(" Editar");
         jbeditar.setBorder(null);
         jbeditar.setBorderPainted(false);
         jbeditar.setContentAreaFilled(false);
@@ -295,46 +297,46 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         jbeditar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jbeditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jBeditar.setText("Editar");
+        jBsaveeditar.setText("Save Edit");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jbborrar)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBsaveeditar)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jbagregar)
-                                .addGap(31, 31, 31))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jbborrar)
-                                .addGap(33, 33, 33)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jbeditar)
-                            .addComponent(jbguadar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jBeditar))
+                            .addComponent(jbguadar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jbagregar)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbagregar)
-                    .addComponent(jbeditar))
-                .addGap(8, 8, 8)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbborrar)
-                    .addComponent(jbguadar))
-                .addGap(27, 27, 27)
-                .addComponent(jBeditar)
-                .addContainerGap(47, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jbeditar)
+                        .addGap(8, 8, 8)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbborrar)
+                            .addComponent(jbguadar)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(jbagregar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(jBsaveeditar)
+                .addGap(20, 20, 20))
         );
 
         add(jPanel3);
-        jPanel3.setBounds(420, 20, 250, 250);
+        jPanel3.setBounds(420, 20, 250, 240);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
         add(jLabel7);
@@ -370,8 +372,8 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,7 +384,13 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
         );
 
         add(jPanel4);
-        jPanel4.setBounds(0, 370, 680, 170);
+        jPanel4.setBounds(10, 370, 660, 170);
+
+        jBuscar.setText("buscar");
+        add(jBuscar);
+        jBuscar.setBounds(600, 310, 65, 23);
+        add(jTbuscar);
+        jTbuscar.setBounds(450, 310, 140, 20);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTidproductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTidproductoActionPerformed
@@ -399,7 +407,8 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBeditar;
+    public javax.swing.JButton jBsaveeditar;
+    public javax.swing.JButton jBuscar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -412,6 +421,7 @@ public class ViewProductosModificacion extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTextField jTbuscar;
     public javax.swing.JTextField jTidproducto;
     public javax.swing.JButton jbagregar;
     public javax.swing.JButton jbanterior;

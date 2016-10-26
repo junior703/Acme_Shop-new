@@ -33,6 +33,7 @@ public class ControllerProductosModificacion  implements ActionListener{
           this.viewProductosModificacion.jbborrar.addActionListener(this);
           this.viewProductosModificacion.jbeditar.addActionListener(this); 
               this.viewProductosModificacion.jbguadar.addActionListener(this); 
+              this.viewProductosModificacion.jBsaveeditar.addActionListener(this); 
               initView();
               showRecords();
     }
@@ -56,8 +57,10 @@ public class ControllerProductosModificacion  implements ActionListener{
             guardar();
         }else if (g.getSource() == viewProductosModificacion.jbborrar){
             deleteRecordButton();
-        }  else if (g.getSource() == viewProductosModificacion.jbeditar){
+        }  else if (g.getSource() == viewProductosModificacion.jBsaveeditar){
           guardarcambios();//alterRecordButton();
+        } else if (g.getSource() == viewProductosModificacion.jbeditar){
+          alterRecordButton();
         } 
     }
     

@@ -133,7 +133,7 @@ public class Main {
         modelReportesVentas=new ModelReportesVentas();
   controllerReportesVentas=new ControllerReportesVentas(viewReportesVentas,modelReportesVentas);////////////////////////
   
-  JPanel views[]=new JPanel[14];  
+  JPanel views[]=new JPanel[13];  
   views[0]=viewProductosModificacion;   
   views[1]=viewProveedores;
   views[2]=viewCliente;   
