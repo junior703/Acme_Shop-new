@@ -14,10 +14,10 @@ import sax.DBConnection;
 public class ModelProductosModificacion {
  
   
-      public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9141835", "sql9141835", "MwVLnwnFfK");
+    public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9141835", "sql9141835", "MwVLnwnFfK");
       
     private int idproductos;
-  private int existencias;
+    private int existencias;
     private String productos;
     private String Descripcion;
     private double precioventa;
