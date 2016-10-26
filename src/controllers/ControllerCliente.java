@@ -8,6 +8,7 @@ package controllers;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import models.ModelCliente;
 import views.ViewCliente;
 
@@ -49,7 +50,7 @@ public class ControllerCliente   implements ActionListener{
         else if (g.getSource() == viewCliente.jbultimo){
             lastButton();
         }
-       /* else if (g.getSource() == viewCliente.jbagregar){
+        else if (g.getSource() == viewCliente.jbagregar){
             aggregar();
         }else if (g.getSource() == viewCliente.jbguadar){
             guardar();
@@ -59,7 +60,7 @@ public class ControllerCliente   implements ActionListener{
           guardarcambios();//alterRecordButton();
         } else if (g.getSource() == viewCliente.jbeditar){
           alterRecordButton();
-        } */
+        } 
     }
     
     private void firstButton() {
@@ -106,7 +107,78 @@ private void showValues(){
        
     }
     
-    
+      private void aggregar() {     
+            viewCliente.jtfidCliente.setText("");
+          viewCliente.jtfName1.setText("");
+        viewCliente.jtfPatLastName.setText("");
+        viewCliente.jtfMatLastName.setText("");
+        viewCliente.jtfTelephone.setText("");
+        viewCliente.jtfEmail.setText("");
+          viewCliente.jtfRFC.setText("");
+            viewCliente.jtfCalle.setText("");
+        viewCliente.jtfTelephone.setText("");
+        viewCliente.jtfCity.setText("");
+        viewCliente.jtfColony.setText("");
+        viewCliente.jtfState.setText("");
+          
+    }
+     public void guardar(){
+     int dialog = JOptionPane.showConfirmDialog(null, "¿Quieres guardar el nuevo registro?");
+       
+     
+    String nombre= viewCliente.jtfName1.getText();
+     String ap_paterno= viewCliente.jtfPatLastName.getText();
+     String ap_materno= viewCliente.jtfMatLastName.getText();
+     int telefono=Integer.parseInt( viewCliente.jtfTelephone.getText());
+   String email= viewCliente.jtfEmail.getText();
+   String rfc= viewCliente.jtfRFC.getText();
+     String calle= viewCliente.jtfCalle.getText();
+     int numero=Integer.parseInt( viewCliente.jtfTelephone.getText());
+     String colonia= viewCliente.jtfCity.getText();
+     String ciudad= viewCliente.jtfColony.getText();
+     String estado= viewCliente.jtfState.getText();
+     
+             modelCliente.guardarregistro( nombre,ap_paterno,ap_materno,telefono,email,rfc,calle,numero,colonia,ciudad,estado) ;
+  
+               modelCliente.setValues();
+                showValues();
+                firstButton();
+        }
+     
+       private void deleteRecordButton(){
+        this.modelCliente.deleteRecord(Integer.parseInt(viewCliente.jtfidCliente.getText()));
+           modelCliente.setValues();
+           showValues();
+        
+    }
+        private void alterRecordButton() {
+        int dialog = JOptionPane.showConfirmDialog(null, "¿Desea modificar este registro?");
+    }
+        
+            private void guardarcambios() {
+        int dialog = JOptionPane.showConfirmDialog(null, "¿Desea guardar los cambios?");
+                 int idcliente =Integer.parseInt( viewCliente.jtfidCliente.getText());
+                String nombre= viewCliente.jtfName1.getText();
+     String ap_paterno= viewCliente.jtfPatLastName.getText();
+     String ap_materno= viewCliente.jtfMatLastName.getText();
+     int telefono=Integer.parseInt( viewCliente.jtfTelephone.getText());
+   String email= viewCliente.jtfEmail.getText();
+   String rfc= viewCliente.jtfRFC.getText();
+     String calle= viewCliente.jtfCalle.getText();
+     int numero=Integer.parseInt( viewCliente.jtfTelephone.getText());
+     String colonia= viewCliente.jtfCity.getText();
+     String ciudad= viewCliente.jtfColony.getText();
+     String estado= viewCliente.jtfState.getText();
+         
+                modelCliente.alterRecord(idcliente, nombre,ap_paterno,ap_materno,telefono,email,rfc,calle,numero,colonia,ciudad,estado);
+                JOptionPane.showMessageDialog(null, "Se han guardado los cambios con éxito");
+                modelCliente.setValues();
+                showValues();
+                firstButton();
+            
+        
+    }
+ 
     private void showRecords() {
        
         viewCliente.jtbledetalle.setModel(modelCliente.tableModel);

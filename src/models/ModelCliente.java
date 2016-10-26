@@ -242,12 +242,26 @@ public class ModelCliente {
          setValues();
     }
     
-   /* public void guardarregistro(String productos, String Descripcion, double preciocompra, double precioventa, int existencias) {
-    String add = "INSERT INTO productos (`producto`,`descripcion`,`pro`,`precio_venta`,`existencias`)"+ " VALUES ('" +productos+
-            "' , '"+Descripcion+ "' ,  '"+preciocompra+"' ,  '"+precioventa+"' , '"+existencias+"');";
+        
+ public void guardarregistro(String nombre,String ap_paterno,String ap_materno,int telefono,String email,  String rfc, String calle,int numero,String colonia,String ciudad, String estado) {
+    String add = "INSERT INTO clientes (`nombre`,`ap_paterno`,`ap_materno`,`telefono`,`email` ,`rfc`,`calle`,`no`,`colonia`,`ciudad`,`estado`)"+ " VALUES ('" +nombre+
+            "' , '"+ap_paterno+ "' ,  '"+ap_materno+"' ,  '"+telefono+"' , '"+email+"', '"+rfc+"', '"+calle+"', '"+numero+"', '"+colonia+"', '"+ciudad+"', '"+estado+"' );";
      connection.executeUpdate(add);
      initValues();
-    }*/
+    }
+
+
+    public void alterRecord(int idcliente, String nombre,String ap_paterno,String ap_materno,int telefono,String email,  String rfc, String calle,int numero,String colonia,String ciudad, String estado) {
+        String alter = "UPDATE clientes SET nombre ='"+nombre+"', ap_paterno ='"+ap_paterno+"', ap_materno ='"+ap_materno+"', telefono ='"+telefono+"' , email='" +email+"' , rfc='" +rfc+"' , calle='" +calle+"'  , no='" +numero+"'  , colonia='" +colonia+"' , ciudad='" +ciudad+"' , estado='" +estado+"'   " + "WHERE id_cliente =" +idcliente;
+        connection.executeUpdate(alter);
+        initValues();
+    }
+    
+    public void deleteRecord(int idproductos) {
+        String delete = "DELETE FROM clientes WHERE id_cliente=" +idcliente;
+        connection.executeUpdate(delete);
+        initValues();
+    }
     
        public void Tabla() {
         while (connection.moveNext()) {

@@ -32,7 +32,7 @@ public class ControllerProductosModificacion  implements ActionListener{
                this.viewProductosModificacion.jbagregar.addActionListener(this);  
           this.viewProductosModificacion.jbborrar.addActionListener(this);
           this.viewProductosModificacion.jbeditar.addActionListener(this); 
-              this.viewProductosModificacion.jbguadar.addActionListener(this); 
+              this.viewProductosModificacion.jBsaveeditar.addActionListener(this); 
               this.viewProductosModificacion.jBsaveeditar.addActionListener(this); 
               initView();
               showRecords();
@@ -53,7 +53,7 @@ public class ControllerProductosModificacion  implements ActionListener{
         }
         else if (g.getSource() == viewProductosModificacion.jbagregar){
             aggregar();
-        }else if (g.getSource() == viewProductosModificacion.jbguadar){
+        }else if (g.getSource() == viewProductosModificacion.jBsaveeditar){
             guardar();
         }else if (g.getSource() == viewProductosModificacion.jbborrar){
             deleteRecordButton();

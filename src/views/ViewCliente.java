@@ -68,8 +68,8 @@ public class ViewCliente extends javax.swing.JPanel {
         jbprimero = new javax.swing.JButton();
         jbanterior = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
-        jBuscar = new javax.swing.JButton();
         jTbuscar = new javax.swing.JTextField();
+        jBuscar1 = new javax.swing.JButton();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -344,7 +344,18 @@ public class ViewCliente extends javax.swing.JPanel {
         jbeditar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jbeditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
+        jBsaveeditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/2.png"))); // NOI18N
         jBsaveeditar.setText("Save Edit");
+        jBsaveeditar.setBorder(null);
+        jBsaveeditar.setBorderPainted(false);
+        jBsaveeditar.setContentAreaFilled(false);
+        jBsaveeditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBsaveeditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jBsaveeditar.setIconTextGap(-3);
+        jBsaveeditar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/3.png"))); // NOI18N
+        jBsaveeditar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/images.png"))); // NOI18N
+        jBsaveeditar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jBsaveeditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -354,17 +365,13 @@ public class ViewCliente extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jbborrar)
                 .addGap(33, 33, 33)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jBsaveeditar)
-                        .addGap(59, 59, 59))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jbeditar)
-                            .addComponent(jbguadar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                        .addComponent(jbagregar)
-                        .addContainerGap(20, Short.MAX_VALUE))))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jBsaveeditar)
+                    .addComponent(jbguadar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbeditar, javax.swing.GroupLayout.Alignment.LEADING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(jbagregar)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,9 +383,9 @@ public class ViewCliente extends javax.swing.JPanel {
                         .addComponent(jbguadar))
                     .addComponent(jbborrar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jbagregar, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jBsaveeditar)
-                .addGap(20, 20, 20))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         add(jPanel3);
@@ -488,12 +495,21 @@ public class ViewCliente extends javax.swing.JPanel {
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
         add(jLabel19);
         jLabel19.setBounds(0, 20, 450, 370);
-
-        jBuscar.setText("buscar");
-        add(jBuscar);
-        jBuscar.setBounds(600, 310, 65, 23);
         add(jTbuscar);
         jTbuscar.setBounds(450, 310, 140, 20);
+
+        jBuscar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bs2.png"))); // NOI18N
+        jBuscar1.setBorder(null);
+        jBuscar1.setBorderPainted(false);
+        jBuscar1.setContentAreaFilled(false);
+        jBuscar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jBuscar1.setIconTextGap(-3);
+        jBuscar1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b1.png"))); // NOI18N
+        jBuscar1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/b1.png"))); // NOI18N
+        jBuscar1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jBuscar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(jBuscar1);
+        jBuscar1.setBounds(600, 300, 51, 50);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbagregarActionPerformed
@@ -515,7 +531,7 @@ public class ViewCliente extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jBsaveeditar;
-    public javax.swing.JButton jBuscar;
+    public javax.swing.JButton jBuscar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
