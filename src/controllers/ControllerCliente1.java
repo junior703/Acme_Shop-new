@@ -3,14 +3,14 @@ package controllers;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionEvent;
-import Views.ViewCliente;
-import Models.ModelCliente;
-import Views.ViewClienteDetalle;
+import views.ViewCliente;
+import models.ModelCliente;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import javax.swing.JPanel;
+import sax.DBConnection;
 
 /**
  *
@@ -20,7 +20,7 @@ public class ControllerCliente1 implements ActionListener
 {
     private final ViewCliente viewCliente;
     private final ModelCliente modelcliente;
-    private Connection c;
+    public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9141835", "sql9141835", "MwVLnwnFfK");
     private Statement s;
     private ResultSet r;
     
@@ -28,10 +28,10 @@ public class ControllerCliente1 implements ActionListener
     {
         this.modelcliente = modelcliente;
         this.viewCliente = viewCliente;
-        this.viewCliente.jB1.addActionListener(this);
-        this.viewCliente.jB2.addActionListener(this);
-        this.viewCliente.jB3.addActionListener(this);
-        this.viewCliente.jB4.addActionListener(this);
+        this.viewCliente.jBsaveeditar.addActionListener(this);
+        this.viewCliente.jBuscar1.addActionListener(this);
+        this.viewCliente.jTbuscar.addActionListener(this);
+        this.viewCliente..addActionListener(this);
         this.viewCliente.jBagregar.addActionListener(this);
         this.viewCliente.jBborrar.addActionListener(this);
         this.viewCliente.jBeditar.addActionListener(this);
@@ -60,7 +60,7 @@ public class ControllerCliente1 implements ActionListener
     }
     public void Coneccion()
     {
-        //c = DriverManager.getConnection("jdbc:mysql://localhost/Store", "root", "7890");
+        
         s = c.createStatement();
         r = s.executeQuery("Select * from Clientes");
         r.next();
