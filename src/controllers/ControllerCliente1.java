@@ -31,49 +31,48 @@ public class ControllerCliente1 implements ActionListener
         this.viewCliente.jBsaveeditar.addActionListener(this);
         this.viewCliente.jBuscar1.addActionListener(this);
         this.viewCliente.jTbuscar.addActionListener(this);
-        this.viewCliente..addActionListener(this);
-        this.viewCliente.jBagregar.addActionListener(this);
-        this.viewCliente.jBborrar.addActionListener(this);
-        this.viewCliente.jBeditar.addActionListener(this);
-        this.viewCliente.jBguadar.addActionListener(this);
-        this.viewCliente.jTapellidomat.addActionListener(this);
-        this.viewCliente.jTapellidopat.addActionListener(this);
-        this.viewCliente.jTcalle.addActionListener(this);
-        this.viewCliente.jTciudad.addActionListener(this);
-        this.viewCliente.jTcolonia.addActionListener(this);
-        this.viewCliente.jTemail.addActionListener(this);
-        this.viewCliente.jTestado.addActionListener(this);
-        this.viewCliente.jTnombre.addActionListener(this);
-        this.viewCliente.jTnum.addActionListener(this);
-        this.viewCliente.jTrfc.addActionListener(this);
-        this.viewCliente.jTtelefono.addActionListener(this);
+        this.viewCliente.jbagregar.addActionListener(this);
+        this.viewCliente.jbanterior.addActionListener(this);
+        this.viewCliente.jbborrar.addActionListener(this);
+        this.viewCliente.jbeditar.addActionListener(this);
+        this.viewCliente.jbguadar.addActionListener(this);
+        this.viewCliente.jbprimero.addActionListener(this);
+        this.viewCliente.jbsiguiente.addActionListener(this);
+        this.viewCliente.jbultimo.addActionListener(this);
+        this.viewCliente.jtfCalle.addActionListener(this);
+        this.viewCliente.jtfCity.addActionListener(this);
+        this.viewCliente.jtfColony.addActionListener(this);
+        this.viewCliente.jtfEmail.addActionListener(this);
+        this.viewCliente.jtfMatLastName.addActionListener(this);
+        this.viewCliente.jtfName1.addActionListener(this);
+        this.viewCliente.jtfRFC.addActionListener(this);
+        this.viewCliente.jtfPatLastName.addActionListener(this);
+        this.viewCliente.jtfState.addActionListener(this);
+        this.viewCliente.jtfTelephone.addActionListener(this);
+        this.viewCliente.jtfidCliente.addActionListener(this);
+        this.viewCliente.jtfno.addActionListener(this);
+        
         Coneccion();
         
     }
 
-    public ControllerCliente1() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    public ControllerCliente1(ViewCliente viewcliente, ViewClienteDetalle viewclientd, ModelCliente modelclient, JPanel[] Views) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     public void Coneccion()
     {
         
         s = c.createStatement();
         r = s.executeQuery("Select * from Clientes");
         r.next();
-        viewCliente.jTnombre.setText(r.getString ("Nombre"));
-        viewCliente.jTapellidopat.setText(r.getString("Apellido pat"));
-        viewCliente.jTapellidomat.setText(r.getString ("Apellido mat"));
-        viewCliente.jTtelefono.setText(r.getString("Telefono"));
-        viewCliente.jTemail.setText(r.getString("E-mail"));
-        viewCliente.jTcalle.setText(r.getString("Calle"));
-        viewCliente.jTrfc.setText(r.getString("RFC"));
-        viewCliente.jTcolonia.setText(r.getNString("Colonia"));
-        viewCliente.jTciudad.setText(r.getString("Ciudad"));
-        viewCliente.jTestado.setText(r.getString("Estado"));                
+        viewCliente.jtfName1.setText(r.getString ("Nombre"));
+        viewCliente.jtfPatLastName.setText(r.getString("Apellido pat"));
+        viewCliente.jtfMatLastName.setText(r.getString ("Apellido mat"));
+        viewCliente.jtfTelephone.setText(r.getString("Telefono"));
+        viewCliente.jtfEmail.setText(r.getString("E-mail"));
+        viewCliente.jtfCalle.setText(r.getString("Calle"));
+        viewCliente.jtfRFC.setText(r.getString("RFC"));
+        viewCliente.jtfColony.setText(r.getNString("Colonia"));
+        viewCliente.jtfCity.setText(r.getString("Ciudad"));
+        viewCliente.jtfState.setText(r.getString("Estado"));                
     }
 
     @Override
