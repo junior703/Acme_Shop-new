@@ -25,7 +25,7 @@ public class Main {
            
             private static ViewCliente viewCliente ;
        private static  ModelCliente  modelCliente;
-           private static  ControllerCliente controllerCliente;
+           private static  ControllerCliente1 controllerCliente;
 
            private static ViewProveedores viewProveedores;
     private static ModelProveedores modelProveedores;
@@ -86,7 +86,7 @@ public class Main {
   
          viewCliente=new  ViewCliente();
                modelCliente=new ModelCliente();
-         controllerCliente=new ControllerCliente(viewCliente,modelCliente);////////////////////////
+         controllerCliente=new ControllerCliente1(viewCliente,modelCliente);////////////////////////
     
                 viewProveedores=new  ViewProveedores();
                modelProveedores=new ModelProveedores();
