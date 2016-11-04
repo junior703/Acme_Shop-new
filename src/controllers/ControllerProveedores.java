@@ -30,10 +30,10 @@ public class ControllerProveedores implements ActionListener{
     public ControllerProveedores(ViewProveedores viewProveedores, ModelProveedores modelProveedores){
         this.modelProveedores = modelProveedores;
         this.viewProveedores = viewProveedores;
-        this.viewProveedores.jbagregar.addActionListener(this);
-        this.viewProveedores.jBsaveeditar.addActionListener(this);
+        this.viewProveedores.jbtn_agregar.addActionListener(this);
+        this.viewProveedores.jbtn_editar.addActionListener(this);
         this.viewProveedores.jBsaveeditar1.addActionListener(this);
-        this.viewProveedores.jbborrar.addActionListener(this);
+        this.viewProveedores.jbtn_borrar.addActionListener(this);
         this.viewProveedores.jbtn_Fist.addActionListener(this);
         this.viewProveedores.jbtn_previus.addActionListener(this);
         this.viewProveedores.jbtn_next.addActionListener(this);
