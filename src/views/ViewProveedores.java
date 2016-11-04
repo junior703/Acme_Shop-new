@@ -29,10 +29,10 @@ public class ViewProveedores extends javax.swing.JPanel {
 
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jbagregar = new javax.swing.JButton();
-        jbborrar = new javax.swing.JButton();
-        jBsaveeditar = new javax.swing.JButton();
-        jbeditar = new javax.swing.JButton();
+        jbtn_agregar = new javax.swing.JButton();
+        jbtn_borrar = new javax.swing.JButton();
+        jbtn_guardar = new javax.swing.JButton();
+        jbtn_editar = new javax.swing.JButton();
         jBsaveeditar1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jbtn_Fist = new javax.swing.JButton();
@@ -61,6 +61,9 @@ public class ViewProveedores extends javax.swing.JPanel {
         jtf_Telefono = new javax.swing.JFormattedTextField();
         jtf_No = new javax.swing.JFormattedTextField();
         jLabel11 = new javax.swing.JLabel();
+        jlb_Nombre1 = new javax.swing.JLabel();
+        jtf_id = new javax.swing.JTextField();
+        jbtn_buscar = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -81,60 +84,60 @@ public class ViewProveedores extends javax.swing.JPanel {
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Botton", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 12), new java.awt.Color(0, 0, 153)))); // NOI18N
         jPanel5.setOpaque(false);
 
-        jbagregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr2.png"))); // NOI18N
-        jbagregar.setText("Agregar");
-        jbagregar.setBorder(null);
-        jbagregar.setBorderPainted(false);
-        jbagregar.setContentAreaFilled(false);
-        jbagregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jbagregar.setIconTextGap(-3);
-        jbagregar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr3.png"))); // NOI18N
-        jbagregar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr1.png"))); // NOI18N
-        jbagregar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jbagregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jbagregar.addActionListener(new java.awt.event.ActionListener() {
+        jbtn_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr2.png"))); // NOI18N
+        jbtn_agregar.setText("Agregar");
+        jbtn_agregar.setBorder(null);
+        jbtn_agregar.setBorderPainted(false);
+        jbtn_agregar.setContentAreaFilled(false);
+        jbtn_agregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_agregar.setIconTextGap(-3);
+        jbtn_agregar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr3.png"))); // NOI18N
+        jbtn_agregar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/agr1.png"))); // NOI18N
+        jbtn_agregar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbtn_agregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbtn_agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbagregarActionPerformed(evt);
+                jbtn_agregarActionPerformed(evt);
             }
         });
 
-        jbborrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del2.png"))); // NOI18N
-        jbborrar.setText("Borrar");
-        jbborrar.setBorder(null);
-        jbborrar.setBorderPainted(false);
-        jbborrar.setContentAreaFilled(false);
-        jbborrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jbborrar.setIconTextGap(-3);
-        jbborrar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del3.png"))); // NOI18N
-        jbborrar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del1.png"))); // NOI18N
-        jbborrar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jbborrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbtn_borrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del2.png"))); // NOI18N
+        jbtn_borrar.setText("Borrar");
+        jbtn_borrar.setBorder(null);
+        jbtn_borrar.setBorderPainted(false);
+        jbtn_borrar.setContentAreaFilled(false);
+        jbtn_borrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_borrar.setIconTextGap(-3);
+        jbtn_borrar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del3.png"))); // NOI18N
+        jbtn_borrar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/del1.png"))); // NOI18N
+        jbtn_borrar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbtn_borrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jBsaveeditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav2.png"))); // NOI18N
-        jBsaveeditar.setText("Save");
-        jBsaveeditar.setBorder(null);
-        jBsaveeditar.setBorderPainted(false);
-        jBsaveeditar.setContentAreaFilled(false);
-        jBsaveeditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jBsaveeditar.setIconTextGap(-3);
-        jBsaveeditar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav3.png"))); // NOI18N
-        jBsaveeditar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav1.png"))); // NOI18N
-        jBsaveeditar.setVerifyInputWhenFocusTarget(false);
-        jBsaveeditar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jBsaveeditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbtn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav2.png"))); // NOI18N
+        jbtn_guardar.setText("Save");
+        jbtn_guardar.setBorder(null);
+        jbtn_guardar.setBorderPainted(false);
+        jbtn_guardar.setContentAreaFilled(false);
+        jbtn_guardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_guardar.setIconTextGap(-3);
+        jbtn_guardar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav3.png"))); // NOI18N
+        jbtn_guardar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sav1.png"))); // NOI18N
+        jbtn_guardar.setVerifyInputWhenFocusTarget(false);
+        jbtn_guardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbtn_guardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jbeditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed2.png"))); // NOI18N
-        jbeditar.setText(" Editar");
-        jbeditar.setBorder(null);
-        jbeditar.setBorderPainted(false);
-        jbeditar.setContentAreaFilled(false);
-        jbeditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jbeditar.setIconTextGap(-3);
-        jbeditar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed3.png"))); // NOI18N
-        jbeditar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed1.png"))); // NOI18N
-        jbeditar.setVerifyInputWhenFocusTarget(false);
-        jbeditar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jbeditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbtn_editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed2.png"))); // NOI18N
+        jbtn_editar.setText(" Editar");
+        jbtn_editar.setBorder(null);
+        jbtn_editar.setBorderPainted(false);
+        jbtn_editar.setContentAreaFilled(false);
+        jbtn_editar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_editar.setIconTextGap(-3);
+        jbtn_editar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed3.png"))); // NOI18N
+        jbtn_editar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ed1.png"))); // NOI18N
+        jbtn_editar.setVerifyInputWhenFocusTarget(false);
+        jbtn_editar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbtn_editar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         jBsaveeditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/2.png"))); // NOI18N
         jBsaveeditar1.setText("Save Edit");
@@ -155,28 +158,28 @@ public class ViewProveedores extends javax.swing.JPanel {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jbborrar)
+                .addComponent(jbtn_borrar)
                 .addGap(33, 33, 33)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBsaveeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbeditar)
+                    .addComponent(jbtn_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_editar)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jBsaveeditar1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(jbagregar)))
+                        .addComponent(jbtn_agregar)))
                 .addGap(20, 20, 20))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jbeditar)
+                .addComponent(jbtn_editar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBsaveeditar1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbborrar, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbagregar, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jbtn_borrar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbtn_agregar, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jBsaveeditar)
+                .addComponent(jbtn_guardar)
                 .addContainerGap())
         );
 
@@ -454,15 +457,32 @@ public class ViewProveedores extends javax.swing.JPanel {
         jLabel11.setVerifyInputWhenFocusTarget(false);
         add(jLabel11);
         jLabel11.setBounds(0, 0, 350, 270);
+
+        jlb_Nombre1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlb_Nombre1.setForeground(new java.awt.Color(0, 0, 102));
+        jlb_Nombre1.setText("ID:");
+        add(jlb_Nombre1);
+        jlb_Nombre1.setBounds(420, 300, 30, 20);
+
+        jtf_id.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        add(jtf_id);
+        jtf_id.setBounds(450, 300, 80, 20);
+
+        jbtn_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bs3.png"))); // NOI18N
+        jbtn_buscar.setToolTipText("");
+        jbtn_buscar.setBorderPainted(false);
+        jbtn_buscar.setContentAreaFilled(false);
+        jbtn_buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add(jbtn_buscar);
+        jbtn_buscar.setBounds(550, 280, 60, 60);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbagregarActionPerformed
+    private void jbtn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_agregarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbagregarActionPerformed
+    }//GEN-LAST:event_jbtn_agregarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBsaveeditar;
     public javax.swing.JButton jBsaveeditar1;
     public javax.swing.JLabel jLabel11;
     public javax.swing.JLabel jLabel5;
@@ -470,10 +490,12 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    public javax.swing.JButton jbagregar;
-    public javax.swing.JButton jbborrar;
-    public javax.swing.JButton jbeditar;
     public javax.swing.JButton jbtn_Fist;
+    public javax.swing.JButton jbtn_agregar;
+    public javax.swing.JButton jbtn_borrar;
+    public javax.swing.JButton jbtn_buscar;
+    public javax.swing.JButton jbtn_editar;
+    public javax.swing.JButton jbtn_guardar;
     public javax.swing.JButton jbtn_last;
     public javax.swing.JButton jbtn_next;
     public javax.swing.JButton jbtn_previus;
@@ -484,6 +506,7 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JLabel jlb_Estado;
     public javax.swing.JLabel jlb_No;
     public javax.swing.JLabel jlb_Nombre;
+    public javax.swing.JLabel jlb_Nombre1;
     public javax.swing.JLabel jlb_RFC;
     public javax.swing.JLabel jlb_Telefono;
     public javax.swing.JTextField jtf_Calle;
@@ -496,5 +519,6 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JTextField jtf_Nombre;
     public javax.swing.JTextField jtf_RFC;
     public javax.swing.JFormattedTextField jtf_Telefono;
+    public javax.swing.JTextField jtf_id;
     // End of variables declaration//GEN-END:variables
 }

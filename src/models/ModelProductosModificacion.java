@@ -14,16 +14,16 @@ import sax.DBConnection;
 public class ModelProductosModificacion {
  
   
-    public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9141835", "sql9141835", "MwVLnwnFfK");
-      
+    public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9142826", "sql9142826", "qAQ4xdtaec");
+          
     private int idproductos;
     private int existencias;
     private String productos;
     private String Descripcion;
     private double precioventa;
-      private double preciocompra;
+    private double preciocompra;
        
-       public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_producto", "producto", "descripcion", "pro","precio_venta","existencias"}, 0);
+    public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_producto", "producto", "descripcion", "pro","precio_venta","existencias"}, 0);
 
     /**
      * @return the idproductos
