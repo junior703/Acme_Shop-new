@@ -58,8 +58,8 @@ public class ViewProveedores extends javax.swing.JPanel {
         jtf_Estado = new javax.swing.JTextField();
         jtf_Contacto = new javax.swing.JTextField();
         jtf_EMail = new javax.swing.JTextField();
-        jtf_Telefono = new javax.swing.JFormattedTextField();
-        jtf_No = new javax.swing.JFormattedTextField();
+        jtf_Telefono = new javax.swing.JTextField();
+        jtf_No = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jlb_Nombre1 = new javax.swing.JLabel();
         jtf_id = new javax.swing.JTextField();
@@ -315,11 +315,9 @@ public class ViewProveedores extends javax.swing.JPanel {
 
         jtf_EMail.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
 
-        jtf_Telefono.setForeground(new java.awt.Color(0, 0, 102));
-        jtf_Telefono.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+        jtf_Telefono.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
 
-        jtf_No.setForeground(new java.awt.Color(0, 0, 102));
-        jtf_No.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+        jtf_No.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -328,12 +326,13 @@ public class ViewProveedores extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtf_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jtf_No, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(jtf_No, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel5))
-                    .addComponent(jtf_EMail, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtf_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtf_EMail, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(119, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -384,13 +383,13 @@ public class ViewProveedores extends javax.swing.JPanel {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(84, 84, 84)
+                .addGap(83, 83, 83)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtf_No, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                    .addComponent(jLabel5)
+                    .addComponent(jtf_No, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(jtf_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtf_EMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -515,10 +514,10 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JTextField jtf_Contacto;
     public javax.swing.JTextField jtf_EMail;
     public javax.swing.JTextField jtf_Estado;
-    public javax.swing.JFormattedTextField jtf_No;
+    public javax.swing.JTextField jtf_No;
     public javax.swing.JTextField jtf_Nombre;
     public javax.swing.JTextField jtf_RFC;
-    public javax.swing.JFormattedTextField jtf_Telefono;
+    public javax.swing.JTextField jtf_Telefono;
     public javax.swing.JTextField jtf_id;
     // End of variables declaration//GEN-END:variables
 }

@@ -186,7 +186,7 @@ public class ModelProveedores {
     }
     
     public void initValues() {
-        String sql = "SELECT * FROM productos";
+        String sql = "SELECT * FROM Proveedor";
         connection.executeQuery(sql);
         connection.moveNext();
         setValues();
@@ -225,20 +225,20 @@ public class ModelProveedores {
          setValues();
     }
     public void saveR(String nombre, String rfc, String calle, int no, String colonia, String ciudad, String estado, String contacto, int telefono, String email){
-        String add = "INSERT INTO proveedores (`nombre`,`rfc`,`calle`,`no`,`colonia`,`ciudad`,`estado`,`nombre_contacto`,`telefono`,`email`)"
+        String add = "INSERT INTO Proveedor (`nombre`,`rfc`,`calle`,`no`,`colonia`,`ciudad`,`estado`,`nombre_contacto`,`telefono`,`email`)"
                 + " VALUES ('"+nombre+"', '"+rfc+ "', '"+calle+"', '"+no+"', '"+colonia+"', '"+ciudad+"', '"+estado+"', '"+contacto+"', '"+telefono+"', '"+email+"');";
      connection.executeUpdate(add);
      initValues();
     }
     
     public void updateD(int id, String nombre, String rfc, String calle, int no, String colonia, String ciudad, String estado, String contacto, int telefono, String email) {
-        String alter = "UPDATE proveedores SET nombre ='"+nombre+"', rfc ='"+rfc+"', calle ='"+calle+"' , no='" +no+"' , colonia='" +ciudad+"', estado ='"+estado+"', nombre_contacto ='"+contacto+"', telefono ='"+telefono+"', email ='"+email+"'  " + "WHERE id_proveedor =" +id;
+        String alter = "UPDATE Proveedor SET nombre ='"+nombre+"', rfc ='"+rfc+"', calle ='"+calle+"' , no='" +no+"' , colonia='" +ciudad+"', estado ='"+estado+"', nombre_contacto ='"+contacto+"', telefono ='"+telefono+"', email ='"+email+"'  " + "WHERE id_proveedor =" +id;
         connection.executeUpdate(alter);
         initValues();
     }
     
     public void deleteR(int id) {
-        String delete = "DELETE FROM proveedores WHERE id_proveedores=" +id;
+        String delete = "DELETE FROM Proveedor WHERE id_proveedores=" +id;
         connection.executeUpdate(delete);
         initValues();
     }

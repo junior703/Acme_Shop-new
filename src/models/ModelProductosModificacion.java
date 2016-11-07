@@ -14,7 +14,8 @@ import sax.DBConnection;
 public class ModelProductosModificacion {
  
   
-    public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9142826", "sql9142826", "qAQ4xdtaec");
+    public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9142826", "sql9142826", 
+            "qAQ4xdtaec");
           
     private int idproductos;
     private int existencias;
@@ -109,7 +110,7 @@ public class ModelProductosModificacion {
     }
     
       public void initValues() {
-                  String sql = "SELECT * FROM productos";
+                  String sql = "SELECT * FROM Productos";
 
     //    String sql = "SELECT id_producto, producto, descripcion, precio_compra, precio_venta, existencias FROM productos";
        //  connection.executeQuery("SELECT id_producto,  producto,  descripcion,  precio_compra,  precio_venta,  existencias FROM productos;");

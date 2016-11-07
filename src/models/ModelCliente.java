@@ -15,7 +15,8 @@ import sax.DBConnection;
  */
 public class ModelCliente {
 
-          public DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
+          public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9142826", "sql9142826", 
+            "qAQ4xdtaec");
 
     private int idcliente;
     private String nombre;
