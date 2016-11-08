@@ -21,7 +21,7 @@ public class ModelCliente {
     private String nombre;
     private String ap_paterno;
     private String ap_materno;
-    private int telefono;
+    private long telefono;//long
     private String email;
     private String rfc;
     private String calle;
@@ -91,7 +91,7 @@ public class ModelCliente {
     /**
      * @return the telefono
      */
-    public int getTelefono() {
+    public long getTelefono() {
         return telefono;
     }
 

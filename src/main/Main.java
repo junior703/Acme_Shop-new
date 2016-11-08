@@ -92,9 +92,11 @@ public class Main {
                modelProveedores=new ModelProveedores();
          controllerProveedores=new ControllerProveedores(viewProveedores,modelProveedores);////////////////////////
 
+         
+         viewMain=new ViewMain();
   viewIniciarSeccion=new  ViewIniciarSeccion();
         modelIniciarSeccion=new ModelIniciarSeccion();
-  controllerIniciarSeccion=new ControllerIniciarSeccion(viewIniciarSeccion,modelIniciarSeccion);////////////////////////
+  controllerIniciarSeccion=new ControllerIniciarSeccion(viewIniciarSeccion,modelIniciarSeccion,viewMain,viewUsuarios);////////////////////////
   
    
   viewUsuarios=new  ViewUsuarios();
@@ -151,7 +153,7 @@ public class Main {
 
   
    // declarar
- viewMain =new ViewMain();   
+ //viewMain =new ViewMain();   
     modelMain=new ModelMain();
     controllerMain=new ControllerMain(viewMain,modelMain,views);
  

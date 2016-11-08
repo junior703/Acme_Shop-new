@@ -6,6 +6,7 @@
 package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import views.ViewMain;
 import models.ModelMain;
@@ -41,6 +42,7 @@ ModelMain modelmain;
           this.viewmain.jMreportesProductos.addActionListener( this);
                 this.viewmain.jMreportesProveedores.addActionListener( this);
             this.viewmain.jMreportesVentas.addActionListener( this);
+               this.viewmain.jMsalir.addActionListener( this);
                 
              
           initView();
@@ -76,6 +78,12 @@ jmiProvedores();
        jMreportesProveedores();
    }else if (ae.getSource ()==viewmain.jMreportesVentas){
        jMreportesVentas();
+   }else if (ae.getSource ()==viewmain.jMsalir){
+        int dialog = JOptionPane.showConfirmDialog(null, "Seguro que quiere dejar la aplicacion?");
+        if (dialog == 0) {
+            System.exit(dialog);
+        
+    }
    }
  }
 

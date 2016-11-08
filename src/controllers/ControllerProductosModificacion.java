@@ -8,6 +8,8 @@ package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import views.ViewProductosModificacion;
 import models.ModelProductosModificacion;
 
@@ -33,9 +35,11 @@ public class ControllerProductosModificacion  implements ActionListener{
           this.viewProductosModificacion.jbborrar.addActionListener(this);
           this.viewProductosModificacion.jbeditar.addActionListener(this); 
               this.viewProductosModificacion.jBsaveeditar.addActionListener(this); 
-              this.viewProductosModificacion.jBsaveeditar.addActionListener(this); 
+              this.viewProductosModificacion.jBsaveeditar1.addActionListener(this); 
+                            this.viewProductosModificacion.jBuscar.addActionListener(this); 
               initView();
-              showRecords();
+              //showRecords();
+              leerdatos();
     }
 
      public void actionPerformed(ActionEvent g) {
@@ -55,14 +59,18 @@ public class ControllerProductosModificacion  implements ActionListener{
             aggregar();
         }else if (g.getSource() == viewProductosModificacion.jBsaveeditar){
             guardar();
+                        showRecords();
         }else if (g.getSource() == viewProductosModificacion.jbborrar){
             deleteRecordButton();
-        }  else if (g.getSource() == viewProductosModificacion.jBsaveeditar){
+        }  else if (g.getSource() == viewProductosModificacion.jBsaveeditar1){
           guardarcambios();//alterRecordButton();
+                   showRecords();
         } else if (g.getSource() == viewProductosModificacion.jbeditar){
           alterRecordButton();
-        } 
+        } else if (g.getSource() == viewProductosModificacion.jBuscar){
+          buscar();
     }
+     }
     
     private void firstButton() {
         modelProductosModificacion.moveFirst();
@@ -169,8 +177,48 @@ public class ControllerProductosModificacion  implements ActionListener{
      private void showRecords() {
         viewProductosModificacion.jtbledetalle.setModel(modelProductosModificacion.tableModel);
         modelProductosModificacion.populateTable();
+       // modelProductosModificacion.initValues();
     }
-  
+     
+      /* private void nameButton() {
+         viewProductosModificacion.jtbledetalle.setModel(modelProductosModificacion.tableModel);//tabla
+        String name = viewProductosModificacion.jTbuscar.getText();//caja
+        modelProductosModificacion.nameQuery(name);
+}*/
+    
+public void buscar(){
+    viewProductosModificacion.jtbledetalle.setModel(modelProductosModificacion.tableModel);
+        String productos = viewProductosModificacion.jTbuscar.getText();
+        modelProductosModificacion.busqueda(productos);
+        
+        
 }
+   public void  leerdatos(){
+     viewProductosModificacion.jtbledetalle.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+
+         @Override
+         
+         public void valueChanged(ListSelectionEvent g) {
+             
+             if(viewProductosModificacion.jtbledetalle.getSelectedRow() != -1){ 
+                 
+             int fila=viewProductosModificacion.jtbledetalle.getSelectedRow() ;
+             
+             viewProductosModificacion.jTidproducto.setText( viewProductosModificacion.jtbledetalle.getValueAt(fila, 0).toString());
+              viewProductosModificacion.jtproducto.setText(viewProductosModificacion.jtbledetalle.getValueAt(fila, 1).toString());
+               viewProductosModificacion.jtdescricion.setText(viewProductosModificacion.jtbledetalle.getValueAt(fila, 2).toString());
+               viewProductosModificacion.jtpreciocompra.setText(viewProductosModificacion.jtbledetalle.getValueAt(fila, 3).toString());
+                viewProductosModificacion.jtprecioventa.setText(viewProductosModificacion.jtbledetalle.getValueAt(fila, 4).toString());
+                   viewProductosModificacion.jtexistencias.setText(viewProductosModificacion.jtbledetalle.getValueAt(fila, 5).toString());
+             }
+         }
+     });
+    }
+
+}
+ /* queryView.jt_contactQueries.setModel(queryModel.tableModel);//tabla
+        String name = queryView.jtf_nameQuery.getText();//caja
+        queryModel.nameQuery(name);*/
+
     
 
