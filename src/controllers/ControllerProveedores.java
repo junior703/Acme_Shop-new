@@ -4,10 +4,12 @@
  * and open the template in the editor.
  */
 package controllers;
-//import sax.DBConnection;
+import sax.DBConnection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import views.ViewProveedores;
 import models.ModelProveedores;
 
@@ -19,7 +21,7 @@ public class ControllerProveedores implements ActionListener{
     private final ViewProveedores viewProveedores;
     private final ModelProveedores modelProveedores;
    
-     //  private DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
+   
        
     public ControllerProveedores(ViewProveedores viewProveedores, ModelProveedores modelProveedores){
         this.modelProveedores = modelProveedores;
@@ -33,19 +35,23 @@ public class ControllerProveedores implements ActionListener{
         this.viewProveedores.jbtn_next.addActionListener(this);
         this.viewProveedores.jbtn_last.addActionListener(this);
         this.viewProveedores.jbtn_buscar.addActionListener(this);
+        this.viewProveedores.jbtn_saveEdit.addActionListener(this);
         initView();
-        //showRecords();
+        firstButton();
+        showRecords();
+        leertabla();
     }
     private void initView() {
         viewProveedores.setVisible(true);
         modelProveedores.initValues();
         modelProveedores.setValues();
+        leertabla();
        
     }
-    /*private void showRecords() {
-        viewProveedores.jtbledetalle.setModel(modelProductosModificacion.tableModel);
-        modelProductosModificacion.populateTable();
-    }*/
+    private void showRecords() {
+        viewProveedores.jtble_detalle.setModel(modelProveedores.tableModel);
+        modelProveedores.populateTable();
+    }
     
     private void firstButton() {
         modelProveedores.moveFirst();
@@ -60,7 +66,7 @@ public class ControllerProveedores implements ActionListener{
     }
     
     private void nextButton() {
-        modelProveedores.moveFirst();
+        modelProveedores.moveNext();
         modelProveedores.setValues();
         showValues();
     }
@@ -107,38 +113,52 @@ public class ControllerProveedores implements ActionListener{
             modelProveedores.setValues();
             showValues();
             firstButton();
+            clear();
             }
         }
     }
     
     private void deleteRecordButton(){
-        this.modelProveedores.deleteR(Integer.parseInt(viewProveedores.jtf_id.getText()));
-        modelProveedores.setValues();
-        showValues();
+        int dialog = JOptionPane.showConfirmDialog(null, "¿Desea continuar con la operacion?");
+        if(dialog == 0){
+            this.modelProveedores.deleteR(Integer.parseInt(viewProveedores.jtf_id.getText()));
+            modelProveedores.setValues();
+            showValues(); 
+            clear();
+        }else{
+            JOptionPane.showMessageDialog(null, "Ningun Cambio Realizado", "Reply", JOptionPane.PLAIN_MESSAGE);
+        }
     }
         
     private void alterRecordButton() {
         int dialog = JOptionPane.showConfirmDialog(null, "¿Desea modificar este registro?");
+        viewProveedores.jbtn_saveEdit.setEnabled(true);
     }
         
     private void guardarcambios() {
         int dialog = JOptionPane.showConfirmDialog(null, "¿Desea guardar los cambios?");
-        int id =Integer.parseInt( viewProveedores.jtf_id.getText());
-        String nombre = viewProveedores.jtf_Nombre.getText();
-        String rfc = viewProveedores.jtf_RFC.getText();
-        String calle = viewProveedores.jtf_Calle.getText(); 
-        int no = Integer.parseInt(viewProveedores.jtf_No.getText());
-        String colonia = viewProveedores.jtf_Colonia.getText();
-        String ciudad = viewProveedores.jtf_Calle.getText();
-        String estado = viewProveedores.jtf_Estado.getText();
-        String contacto = viewProveedores.jtf_Contacto.getText();
-        int telefono = Integer.parseInt(viewProveedores.jtf_Telefono.getText());
-        String email = viewProveedores.jtf_EMail.getText();
-        modelProveedores.updateD(id, nombre, rfc, calle, no, colonia, ciudad, estado, contacto, telefono, email);
-        JOptionPane.showMessageDialog(null, "Se han guardado los cambios con éxito");
-        modelProveedores.setValues();
-        showValues();
-        firstButton();
+        if(dialog == 0){
+            int id =Integer.parseInt( viewProveedores.jtf_id.getText());
+            String nombre = viewProveedores.jtf_Nombre.getText();
+            String rfc = viewProveedores.jtf_RFC.getText();
+            String calle = viewProveedores.jtf_Calle.getText(); 
+            int no = Integer.parseInt(viewProveedores.jtf_No.getText());
+            String colonia = viewProveedores.jtf_Colonia.getText();
+            String ciudad = viewProveedores.jtf_Calle.getText();
+            String estado = viewProveedores.jtf_Estado.getText();
+            String contacto = viewProveedores.jtf_Contacto.getText();
+            int telefono = Integer.parseInt(viewProveedores.jtf_Telefono.getText());
+            String email = viewProveedores.jtf_EMail.getText();
+            modelProveedores.updateD(id, nombre, rfc, calle, no, colonia, ciudad, estado, contacto, telefono, email);
+            JOptionPane.showMessageDialog(null, "Se han guardado los cambios con éxito");
+            modelProveedores.setValues();
+            showValues();
+            firstButton();
+            viewProveedores.jbtn_saveEdit.setEnabled(false);
+            clear();
+        }else{
+            JOptionPane.showMessageDialog(null, "Ningun Cambio Realizado", "Reply", JOptionPane.PLAIN_MESSAGE);
+        }
     }
     
     
@@ -155,33 +175,71 @@ public class ControllerProveedores implements ActionListener{
         viewProveedores.jtf_Telefono.setText(""+modelProveedores.getTelefono());
         viewProveedores.jtf_EMail.setText(""+modelProveedores.getEmail());
     }
+    public void clear(){
+        while(modelProveedores.tableModel.getRowCount() >0){
+            modelProveedores.tableModel.removeRow(0);
+        }
+        showRecords();
+    }
+    public void buscar(){
+        DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
+        String sql = "SELECT * FROM proveedor WHERE id_proveedor = "+viewProveedores.jtf_id.getText(); 
+        connection.executeQuery(sql);
+        connection.moveNext();
+        viewProveedores.jtf_id.setText(connection.getString("id_proveedor"));
+        viewProveedores.jtf_Nombre.setText(connection.getString("nombre"));
+        viewProveedores.jtf_RFC.setText(connection.getString("rfc"));
+        viewProveedores.jtf_Calle.setText(connection.getString("calle"));    
+        viewProveedores.jtf_No.setText(connection.getString("no"));
+        viewProveedores.jtf_Colonia.setText(connection.getString("colonia"));
+        viewProveedores.jtf_Ciudad.setText(connection.getString("ciudad"));
+        viewProveedores.jtf_Estado.setText(connection.getString("estado"));
+        viewProveedores.jtf_Contacto.setText(connection.getString("nombre_contacto"));
+        viewProveedores.jtf_Telefono.setText(connection.getString("telefono"));
+        viewProveedores.jtf_EMail.setText(connection.getString("email"));
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == viewProveedores.jbtn_Fist){
             firstButton();
-        }
-        else if (e.getSource() == viewProveedores.jbtn_previus){
+        }else if (e.getSource() == viewProveedores.jbtn_previus){
             previousButton();
-        }
-        else if (e.getSource() == viewProveedores.jbtn_next){
+        }else if (e.getSource() == viewProveedores.jbtn_next){
             nextButton();
-        }
-        else if (e.getSource() == viewProveedores.jbtn_last){
+        }else if (e.getSource() == viewProveedores.jbtn_last){
             lastButton();
-        }
-        else if (e.getSource() == viewProveedores.jbtn_agregar){
+        }else if (e.getSource() == viewProveedores.jbtn_agregar){
             aggregar();
         }else if (e.getSource() == viewProveedores.jbtn_guardar){
             guardar();
         }else if (e.getSource() == viewProveedores.jbtn_borrar){
             deleteRecordButton();
-        }  else if (e.getSource() == viewProveedores.jbtn_agregar){
-          guardarcambios();//alterRecordButton();
-        } else if (e.getSource() == viewProveedores.jbtn_editar){
-          alterRecordButton();
+        }else if (e.getSource() == viewProveedores.jbtn_saveEdit){
+            guardarcambios();
+        }else if (e.getSource() == viewProveedores.jbtn_editar){
+            alterRecordButton();
+        }else if (e.getSource() == viewProveedores.jbtn_buscar){
+          buscar();
         } 
     }
     
-    
+    public void  leertabla(){
+        viewProveedores.jtble_detalle.getSelectionModel().addListSelectionListener((ListSelectionEvent g) -> {
+            if(viewProveedores.jtble_detalle.getSelectedRow() != -1){
+                int fila=viewProveedores.jtble_detalle.getSelectedRow() ;
+                viewProveedores.jtf_id.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 0).toString());
+                viewProveedores.jtf_Nombre.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 1).toString());
+                viewProveedores.jtf_RFC.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 2).toString());
+                viewProveedores.jtf_Calle.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 3).toString());
+                viewProveedores.jtf_No.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 4).toString());
+                viewProveedores.jtf_Colonia.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 5).toString());
+                viewProveedores.jtf_Ciudad.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 6).toString());
+                viewProveedores.jtf_Estado.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 7).toString());
+                viewProveedores.jtf_Contacto.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 8).toString());
+                viewProveedores.jtf_Telefono.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 9).toString());
+                viewProveedores.jtf_EMail.setText("" + viewProveedores.jtble_detalle.getValueAt(fila, 10).toString());
+            }
+        });
+    }
 }

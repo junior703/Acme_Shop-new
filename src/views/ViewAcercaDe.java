@@ -5,7 +5,6 @@
  */
 package views;
 
-import java.awt.Color;
 /**
  *
  * @author Sammy Guergachi <sguergachi at gmail.com>
@@ -28,26 +27,52 @@ public class ViewAcercaDe extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(216, 225));
+        setMinimumSize(new java.awt.Dimension(216, 225));
+        setPreferredSize(new java.awt.Dimension(216, 225));
+        setLayout(null);
+
+        jLabel2.setText("Punto de Ventas de Acme Shop");
+        add(jLabel2);
+        jLabel2.setBounds(10, 10, 150, 20);
+
+        jLabel3.setText("Desarrolladores:");
+        add(jLabel3);
+        jLabel3.setBounds(10, 30, 80, 14);
+
+        jLabel4.setText("Jr");
+        add(jLabel4);
+        jLabel4.setBounds(10, 50, 9, 14);
+
+        jLabel5.setText("Azael");
+        add(jLabel5);
+        jLabel5.setBounds(10, 70, 26, 14);
+
+        jLabel6.setText("Uriel");
+        add(jLabel6);
+        jLabel6.setBounds(10, 90, 21, 14);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
-        );
+        jLabel1.setAutoscrolls(true);
+        add(jLabel1);
+        jLabel1.setBounds(0, 0, 220, 225);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

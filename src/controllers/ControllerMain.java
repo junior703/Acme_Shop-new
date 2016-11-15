@@ -6,6 +6,7 @@
 package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import views.ViewMain;
 import models.ModelMain;
@@ -18,11 +19,16 @@ public class ControllerMain  implements ActionListener {
 ViewMain viewmain;
 ModelMain modelmain;
    JPanel views[];
+//variables valor de los JPane
+   int width1[];
+   int height1[];
    
-    public ControllerMain(ViewMain viewmain, ModelMain modelmain, JPanel[] views) {
+    public ControllerMain(ViewMain viewmain, ModelMain modelmain, JPanel[] views, int widht[], int height[]) {
         this.viewmain = viewmain;
         this.modelmain = modelmain;
         this.views = views;
+        this.width1 = widht;
+        this.height1 = height;
         
          this.viewmain.jMclientes.addActionListener( this);
           this.viewmain.jMprovedores.addActionListener( this);
@@ -41,8 +47,9 @@ ModelMain modelmain;
           this.viewmain.jMreportesProductos.addActionListener( this);
                 this.viewmain.jMreportesProveedores.addActionListener( this);
             this.viewmain.jMreportesVentas.addActionListener( this);
+               this.viewmain.jMsalir.addActionListener( this);
                 
-             
+           
           initView();
     }
     
@@ -76,6 +83,12 @@ jmiProvedores();
        jMreportesProveedores();
    }else if (ae.getSource ()==viewmain.jMreportesVentas){
        jMreportesVentas();
+   }else if (ae.getSource ()==viewmain.jMsalir){
+        int dialog = JOptionPane.showConfirmDialog(null, "Seguro que quiere dejar la aplicacion?");
+        if (dialog == 0) {
+            System.exit(dialog);
+        
+    }
    }
  }
 
@@ -88,6 +101,9 @@ jmiProvedores();
         this.viewmain.setContentPane(views[1]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.resize(width1[1], height1[1]+50);
+        this.viewmain.setLocationRelativeTo(null);
+        
 
     }
          public void jMclientes(){
@@ -99,16 +115,21 @@ jmiProvedores();
         this.viewmain.setContentPane(views[3]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        
     }
            public void jMiniciarsecion(){
         this.viewmain.setContentPane(views[4]);
-        this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.revalidate();
+        this.viewmain.resize(width1[4], height1[4]*2);
+        this.viewmain.setLocationRelativeTo(null);
     }
             public void jmusuario(){
         this.viewmain.setContentPane(views[5]);
-        this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.revalidate();
+        this.viewmain.setLocationRelativeTo(null);
+       
     }
              
               public void jMoperacionVentas(){
@@ -136,10 +157,11 @@ jmiProvedores();
         this.viewmain.revalidate();
         this.viewmain.repaint();
     }
-                   public void jMreportesProveedores(){
+    public void jMreportesProveedores(){
         this.viewmain.setContentPane(views[11]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.setLocationRelativeTo(null);
     }
                     public void jMreportesVentas(){
         this.viewmain.setContentPane(views[12]);

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package models;
 
 import javax.swing.table.DefaultTableModel;
@@ -11,18 +5,17 @@ import sax.DBConnection;
 
 /**
  * 
- * @author Sammy Guergachi <sguergachi at gmail.com>
+ * @author Azael
  */
 public class ModelCliente {
 
-          public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9142826", "sql9142826", 
-            "qAQ4xdtaec");
+          public DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
 
     private int idcliente;
     private String nombre;
     private String ap_paterno;
     private String ap_materno;
-    private int telefono;
+    private long telefono;//long
     private String email;
     private String rfc;
     private String calle;
@@ -31,7 +24,7 @@ public class ModelCliente {
     private String ciudad;
     private String estado;
 
-             public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"ID", "nombre","telefono","RFC","telefono","estado","ciudad","colonia","no","calle"}, 0);
+             public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"ID", "nombre","ap_Paterno","ap_Materno","telefono","email","RFC","estado","ciudad","colonia","calle","no"}, 0);
 
     /**
      * @return the idcliente
@@ -92,7 +85,7 @@ public class ModelCliente {
     /**
      * @return the telefono
      */
-    public int getTelefono() {
+    public long getTelefono() {
         return telefono;
     }
 
@@ -258,7 +251,7 @@ public class ModelCliente {
         initValues();
     }
     
-    public void deleteRecord(int idproductos) {
+    public void deleteRecord(int idcliente) {
         String delete = "DELETE FROM clientes WHERE id_cliente=" +idcliente;
         connection.executeUpdate(delete);
         initValues();
@@ -267,7 +260,14 @@ public class ModelCliente {
        public void Tabla() {
         while (connection.moveNext()) {
             setValues();
-               tableModel.addRow(new Object []{idcliente, nombre,ap_paterno,ap_materno,telefono,email,rfc,calle,numero,colonia,ciudad,estado});
+               tableModel.addRow(new Object []{idcliente, nombre,ap_paterno,ap_materno,telefono,email,rfc,estado,ciudad,colonia,calle,numero});
         }
     }
+        public void busqueda(int idcliente) {
+        String query =   "Select * from clientes  WHERE id_cliente = "+idcliente; 
+        connection.executeQuery(query);
+                connection.moveNext();
+          setValues();
+     //   populateTable();
+    }   
 }

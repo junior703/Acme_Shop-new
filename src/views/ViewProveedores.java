@@ -33,7 +33,7 @@ public class ViewProveedores extends javax.swing.JPanel {
         jbtn_borrar = new javax.swing.JButton();
         jbtn_guardar = new javax.swing.JButton();
         jbtn_editar = new javax.swing.JButton();
-        jBsaveeditar1 = new javax.swing.JButton();
+        jbtn_saveEdit = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jbtn_Fist = new javax.swing.JButton();
         jbtn_previus = new javax.swing.JButton();
@@ -60,10 +60,14 @@ public class ViewProveedores extends javax.swing.JPanel {
         jtf_EMail = new javax.swing.JTextField();
         jtf_Telefono = new javax.swing.JTextField();
         jtf_No = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         jlb_Nombre1 = new javax.swing.JLabel();
         jtf_id = new javax.swing.JTextField();
         jbtn_buscar = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtble_detalle = new javax.swing.JTable();
+        proveedores = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -139,18 +143,19 @@ public class ViewProveedores extends javax.swing.JPanel {
         jbtn_editar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jbtn_editar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jBsaveeditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/2.png"))); // NOI18N
-        jBsaveeditar1.setText("Save Edit");
-        jBsaveeditar1.setBorder(null);
-        jBsaveeditar1.setBorderPainted(false);
-        jBsaveeditar1.setContentAreaFilled(false);
-        jBsaveeditar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBsaveeditar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jBsaveeditar1.setIconTextGap(-3);
-        jBsaveeditar1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/3.png"))); // NOI18N
-        jBsaveeditar1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/images.png"))); // NOI18N
-        jBsaveeditar1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jBsaveeditar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbtn_saveEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/2.png"))); // NOI18N
+        jbtn_saveEdit.setText("Save Edit");
+        jbtn_saveEdit.setBorder(null);
+        jbtn_saveEdit.setBorderPainted(false);
+        jbtn_saveEdit.setContentAreaFilled(false);
+        jbtn_saveEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtn_saveEdit.setEnabled(false);
+        jbtn_saveEdit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbtn_saveEdit.setIconTextGap(-3);
+        jbtn_saveEdit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/3.png"))); // NOI18N
+        jbtn_saveEdit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/images.png"))); // NOI18N
+        jbtn_saveEdit.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbtn_saveEdit.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -161,24 +166,32 @@ public class ViewProveedores extends javax.swing.JPanel {
                 .addComponent(jbtn_borrar)
                 .addGap(33, 33, 33)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbtn_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtn_editar)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jBsaveeditar1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(jbtn_agregar)))
-                .addGap(20, 20, 20))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbtn_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbtn_editar))
+                        .addContainerGap(89, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jbtn_saveEdit)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbtn_agregar)
+                        .addGap(18, 18, 18))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jbtn_editar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBsaveeditar1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbtn_borrar, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbtn_agregar, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(jbtn_editar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbtn_saveEdit))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbtn_borrar, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jbtn_agregar, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(jbtn_guardar)
                 .addContainerGap())
         );
@@ -188,6 +201,7 @@ public class ViewProveedores extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Navegacion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 102))); // NOI18N
+        jPanel3.setOpaque(false);
 
         jbtn_Fist.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jbtn_Fist.setForeground(new java.awt.Color(0, 0, 102));
@@ -236,9 +250,9 @@ public class ViewProveedores extends javax.swing.JPanel {
                 .addComponent(jbtn_previus, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(jbtn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jbtn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGap(24, 24, 24))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -324,35 +338,45 @@ public class ViewProveedores extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(86, 86, 86)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtf_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jtf_No, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel5))
-                    .addComponent(jtf_EMail, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(119, Short.MAX_VALUE))
+                        .addGap(98, 98, 98)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_Ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jtf_No, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel5))
+                            .addComponent(jtf_Estado, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(jtf_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(jtf_EMail, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(71, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addComponent(jtf_Contacto))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 6, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(14, 14, 14)
                             .addComponent(jlb_Nombre)
-                            .addGap(4, 4, 4)
-                            .addComponent(jtf_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jtf_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(48, 48, 48)
                             .addComponent(jlb_RFC)
-                            .addGap(4, 4, 4)
-                            .addComponent(jtf_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jtf_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(33, 33, 33)
                             .addComponent(jlb_Calle)
-                            .addGap(4, 4, 4)
-                            .addComponent(jtf_Calle, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jtf_Calle, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(56, 56, 56)
                             .addComponent(jlb_No)
@@ -360,25 +384,18 @@ public class ViewProveedores extends javax.swing.JPanel {
                             .addComponent(jtf_Colonia, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(24, 24, 24)
-                            .addComponent(jlb_Ciudad)
-                            .addGap(4, 4, 4)
-                            .addComponent(jtf_Ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jlb_Ciudad))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(21, 21, 21)
-                            .addComponent(jlb_Estado)
-                            .addGap(4, 4, 4)
-                            .addComponent(jtf_Estado, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jlb_Contacto)
-                            .addGap(4, 4, 4)
-                            .addComponent(jtf_Contacto, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jlb_Estado))
+                        .addComponent(jlb_Contacto)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(2, 2, 2)
                             .addComponent(jlb_Telefono))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(27, 27, 27)
                             .addComponent(jlb_EMail)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 7, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -387,11 +404,16 @@ public class ViewProveedores extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jtf_No, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jtf_Ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jtf_Estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jtf_Contacto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtf_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtf_EMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jtf_EMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -418,25 +440,13 @@ public class ViewProveedores extends javax.swing.JPanel {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(2, 2, 2)
                             .addComponent(jlb_No)))
-                    .addGap(6, 6, 6)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jlb_Ciudad))
-                        .addComponent(jtf_Ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(6, 6, 6)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jlb_Estado))
-                        .addComponent(jtf_Estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(6, 6, 6)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jlb_Contacto))
-                        .addComponent(jtf_Contacto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(8, 8, 8)
+                    .addComponent(jlb_Ciudad)
+                    .addGap(10, 10, 10)
+                    .addComponent(jlb_Estado)
+                    .addGap(10, 10, 10)
+                    .addComponent(jlb_Contacto)
+                    .addGap(10, 10, 10)
                     .addComponent(jlb_Telefono)
                     .addGap(12, 12, 12)
                     .addComponent(jlb_EMail)
@@ -445,17 +455,6 @@ public class ViewProveedores extends javax.swing.JPanel {
 
         add(jPanel1);
         jPanel1.setBounds(10, 10, 360, 260);
-
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
-        jLabel11.setToolTipText("");
-        jLabel11.setAlignmentY(0.0F);
-        jLabel11.setFocusable(false);
-        jLabel11.setRequestFocusEnabled(false);
-        jLabel11.setVerifyInputWhenFocusTarget(false);
-        add(jLabel11);
-        jLabel11.setBounds(0, 0, 350, 270);
 
         jlb_Nombre1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jlb_Nombre1.setForeground(new java.awt.Color(0, 0, 102));
@@ -474,6 +473,78 @@ public class ViewProveedores extends javax.swing.JPanel {
         jbtn_buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add(jbtn_buscar);
         jbtn_buscar.setBounds(550, 280, 60, 60);
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
+        jLabel11.setToolTipText("");
+        jLabel11.setAlignmentY(0.0F);
+        jLabel11.setFocusable(false);
+        jLabel11.setRequestFocusEnabled(false);
+        jLabel11.setVerifyInputWhenFocusTarget(false);
+        add(jLabel11);
+        jLabel11.setBounds(0, 0, 660, 480);
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Detalle de los Productos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 12), new java.awt.Color(0, 0, 204))); // NOI18N
+
+        jtble_detalle.setBackground(new java.awt.Color(204, 204, 255));
+        jtble_detalle.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jtble_detalle.setForeground(new java.awt.Color(0, 0, 102));
+        jtble_detalle.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID_Producto", "Nombre", "RFC", "Calle", "no", "Colonia", "Ciudad", "Estado", "Contacto", "Telefono", "E-Mail"
+            }
+        ));
+        jtble_detalle.setColumnSelectionAllowed(true);
+        jtble_detalle.setGridColor(new java.awt.Color(0, 0, 102));
+        jtble_detalle.getTableHeader().setResizingAllowed(false);
+        jScrollPane1.setViewportView(jtble_detalle);
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        add(jPanel6);
+        jPanel6.setBounds(10, 370, 660, 170);
+
+        proveedores.setBackground(new java.awt.Color(255, 255, 255));
+        proveedores.setOpaque(false);
+
+        javax.swing.GroupLayout proveedoresLayout = new javax.swing.GroupLayout(proveedores);
+        proveedores.setLayout(proveedoresLayout);
+        proveedoresLayout.setHorizontalGroup(
+            proveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 690, Short.MAX_VALUE)
+        );
+        proveedoresLayout.setVerticalGroup(
+            proveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 670, Short.MAX_VALUE)
+        );
+
+        add(proveedores);
+        proveedores.setBounds(-10, -20, 690, 670);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_agregarActionPerformed
@@ -482,13 +553,14 @@ public class ViewProveedores extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBsaveeditar1;
     public javax.swing.JLabel jLabel11;
     public javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JButton jbtn_Fist;
     public javax.swing.JButton jbtn_agregar;
     public javax.swing.JButton jbtn_borrar;
@@ -498,6 +570,7 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JButton jbtn_last;
     public javax.swing.JButton jbtn_next;
     public javax.swing.JButton jbtn_previus;
+    public javax.swing.JButton jbtn_saveEdit;
     public javax.swing.JLabel jlb_Calle;
     public javax.swing.JLabel jlb_Ciudad;
     public javax.swing.JLabel jlb_Contacto;
@@ -508,6 +581,7 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JLabel jlb_Nombre1;
     public javax.swing.JLabel jlb_RFC;
     public javax.swing.JLabel jlb_Telefono;
+    public javax.swing.JTable jtble_detalle;
     public javax.swing.JTextField jtf_Calle;
     public javax.swing.JTextField jtf_Ciudad;
     public javax.swing.JTextField jtf_Colonia;
@@ -519,5 +593,6 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JTextField jtf_RFC;
     public javax.swing.JTextField jtf_Telefono;
     public javax.swing.JTextField jtf_id;
+    public javax.swing.JPanel proveedores;
     // End of variables declaration//GEN-END:variables
 }

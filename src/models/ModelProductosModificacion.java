@@ -14,17 +14,17 @@ import sax.DBConnection;
 public class ModelProductosModificacion {
  
   
-    public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9142826", "sql9142826", 
-            "qAQ4xdtaec");
-          
+    //public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9141835", "sql9141835", "MwVLnwnFfK");
+            public DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
+
     private int idproductos;
     private int existencias;
     private String productos;
     private String Descripcion;
     private double precioventa;
-    private double preciocompra;
+      private double preciocompra;
        
-    public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_producto", "producto", "descripcion", "pro","precio_venta","existencias"}, 0);
+       public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_producto", "producto", "descripcion", "pro","precio_venta","existencias"}, 0);
 
     /**
      * @return the idproductos
@@ -110,7 +110,7 @@ public class ModelProductosModificacion {
     }
     
       public void initValues() {
-                  String sql = "SELECT * FROM Productos";
+                  String sql = "SELECT * FROM productos";
 
     //    String sql = "SELECT id_producto, producto, descripcion, precio_compra, precio_venta, existencias FROM productos";
        //  connection.executeQuery("SELECT id_producto,  producto,  descripcion,  precio_compra,  precio_venta,  existencias FROM productos;");
@@ -148,7 +148,7 @@ public class ModelProductosModificacion {
         connection.moveLast();
          setValues();
     }
-//        String add = "INSERT INTO contactos (`nombre`, `telefono`, `email`)"+ "VALUES ('"+name+"', '"+phone+"', '"+mail+"');";
+// String add = "INSERT INTO contactos (`nombre`, `telefono`, `email`)"+ "VALUES ('"+name+"', '"+phone+"', '"+mail+"');";
 
     
  public void guardarregistro(String productos, String Descripcion, double preciocompra, double precioventa, int existencias) {
@@ -174,7 +174,16 @@ public class ModelProductosModificacion {
    while (connection.moveNext()) {
             setValues();
             tableModel.addRow(new Object []{idproductos, productos, Descripcion, preciocompra,precioventa,existencias});
+      
         }
     }
+    public void busqueda(int idproductos) {
+        String query =   "Select * from productos  WHERE id_producto = "+idproductos; 
+        connection.executeQuery(query);
+                connection.moveNext();
+          setValues();
+     //   populateTable();
+    }   
+   
    
 }

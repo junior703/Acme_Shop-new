@@ -13,9 +13,10 @@ import sax.DBConnection;
  * @author DRAGKOZ
  */
 public class ModelProveedores {
-    public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9142826", "sql9142826", 
-            "qAQ4xdtaec");
-    
+   // public DBConnection connection = new DBConnection(3306,"sql9.freemysqlhosting.net", "sql9142826", "sql9142826", 
+           // "qAQ4xdtaec"); //fuera de servicio
+                public DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
+
     private int id_proveedor;
     private String nombre;
     private String rfc;
@@ -186,7 +187,7 @@ public class ModelProveedores {
     }
     
     public void initValues() {
-        String sql = "SELECT * FROM Proveedor";
+        String sql = "SELECT * FROM proveedor";
         connection.executeQuery(sql);
         connection.moveNext();
         setValues();
@@ -224,21 +225,28 @@ public class ModelProveedores {
         connection.moveLast();
          setValues();
     }
+    public void search(int id){
+        String sql = "SELECT * FROM proveedor WHERE id_proveedor ="+id;
+        connection.executeQuery(sql);
+        connection.moveNext();
+        setValues();
+    }
+            
     public void saveR(String nombre, String rfc, String calle, int no, String colonia, String ciudad, String estado, String contacto, int telefono, String email){
-        String add = "INSERT INTO Proveedor (`nombre`,`rfc`,`calle`,`no`,`colonia`,`ciudad`,`estado`,`nombre_contacto`,`telefono`,`email`)"
+        String add = "INSERT INTO proveedor (`nombre`,`rfc`,`calle`,`no`,`colonia`,`ciudad`,`estado`,`nombre_contacto`,`telefono`,`email`)"
                 + " VALUES ('"+nombre+"', '"+rfc+ "', '"+calle+"', '"+no+"', '"+colonia+"', '"+ciudad+"', '"+estado+"', '"+contacto+"', '"+telefono+"', '"+email+"');";
      connection.executeUpdate(add);
      initValues();
     }
     
     public void updateD(int id, String nombre, String rfc, String calle, int no, String colonia, String ciudad, String estado, String contacto, int telefono, String email) {
-        String alter = "UPDATE Proveedor SET nombre ='"+nombre+"', rfc ='"+rfc+"', calle ='"+calle+"' , no='" +no+"' , colonia='" +ciudad+"', estado ='"+estado+"', nombre_contacto ='"+contacto+"', telefono ='"+telefono+"', email ='"+email+"'  " + "WHERE id_proveedor =" +id;
+        String alter = "UPDATE proveedor SET nombre ='"+nombre+"', rfc ='"+rfc+"', calle ='"+calle+"' , no='" +no+"' , colonia='" +ciudad+"', estado ='"+estado+"', nombre_contacto ='"+contacto+"', telefono ='"+telefono+"', email ='"+email+"'  " + "WHERE id_proveedor =" +id;
         connection.executeUpdate(alter);
         initValues();
     }
     
     public void deleteR(int id) {
-        String delete = "DELETE FROM Proveedor WHERE id_proveedores=" +id;
+        String delete = "DELETE FROM proveedor WHERE id_proveedor=" +id;
         connection.executeUpdate(delete);
         initValues();
     }
@@ -249,4 +257,11 @@ public class ModelProveedores {
             tableModel.addRow(new Object []{id_proveedor, nombre, rfc, calle, no, colonia, ciudad, estado, contacto, telefono, email});
         }
     }
+    
+    public void busqueda(int idproductos) {
+        String query =   "Select * from proveedor  WHERE id_proveedor = "+idproductos; 
+        connection.executeQuery(query);
+                connection.moveNext();
+          setValues();
+    }  
 }

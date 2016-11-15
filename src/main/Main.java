@@ -25,7 +25,7 @@ public class Main {
            
             private static ViewCliente viewCliente ;
        private static  ModelCliente  modelCliente;
-           private static  ControllerCliente1 controllerCliente;
+           private static  ControllerCliente controllerCliente;
 
            private static ViewProveedores viewProveedores;
     private static ModelProveedores modelProveedores;
@@ -86,15 +86,17 @@ public class Main {
   
          viewCliente=new  ViewCliente();
                modelCliente=new ModelCliente();
-         controllerCliente=new ControllerCliente1(viewCliente,modelCliente);////////////////////////
+         controllerCliente=new ControllerCliente(viewCliente,modelCliente);////////////////////////
     
                 viewProveedores=new  ViewProveedores();
                modelProveedores=new ModelProveedores();
          controllerProveedores=new ControllerProveedores(viewProveedores,modelProveedores);////////////////////////
 
+         
+         viewMain=new ViewMain();
   viewIniciarSeccion=new  ViewIniciarSeccion();
-        modelIniciarSeccion=new ModelIniciarSeccion();
-  controllerIniciarSeccion=new ControllerIniciarSeccion(viewIniciarSeccion,modelIniciarSeccion);////////////////////////
+       modelIniciarSeccion=new ModelIniciarSeccion();
+  controllerIniciarSeccion=new ControllerIniciarSeccion(viewIniciarSeccion,modelIniciarSeccion,viewMain,viewUsuarios);////////////////////////
   
    
   viewUsuarios=new  ViewUsuarios();
@@ -109,9 +111,10 @@ public class Main {
         modelOperacionesCompras=new ModelOperacionesCompras();
   controllerOperacionesCompras=new ControllerOperacionesCompras(viewOperacionesCompras,modelOperacionesCompras);////////////////////////
     
+      //    modelIniciarSeccion=new ModelIniciarSeccion();
   viewOperacionesVentas=new  ViewOperacionesVentas();
         modelOperacionesVentas=new ModelOperacionesVentas();
-  controllerOperacionesVentas=new ControllerOperacionesVentas(viewOperacionesVentas,modelOperacionesVentas);////////////////////////
+  controllerOperacionesVentas=new ControllerOperacionesVentas(viewOperacionesVentas,modelOperacionesVentas,modelIniciarSeccion);////////////////////////
   
   viewReportesClientes=new  ViewReportesClientes();
         modelReportesClientes=new ModelReportesClientes();
@@ -133,6 +136,7 @@ public class Main {
         modelReportesVentas=new ModelReportesVentas();
   controllerReportesVentas=new ControllerReportesVentas(viewReportesVentas,modelReportesVentas);////////////////////////
   
+  
   JPanel views[]=new JPanel[13];  
   views[0]=viewProductosModificacion;   
   views[1]=viewProveedores;
@@ -147,14 +151,41 @@ public class Main {
   views[10]=viewReportesProductos;
   views[11]=viewReportesProveedores;   
   views[12]=viewReportesVentas;
-
-
-  
+  //en desarrollo-----------------------------------start
+int widht[]= new int[13];
+  widht[0]=viewProductosModificacion.getWidth();   
+  widht[1]=viewProveedores.proveedores.getWidth();
+  widht[2]=viewCliente.getWidth();   
+  widht[3]=viewAcercaDe.getWidth();
+  widht[4]=viewIniciarSeccion.iniSecion.getWidth();   
+  widht[5]=viewUsuarios.getWidth(); 
+  widht[6]=viewOperacionesVentas.getWidth();
+  widht[7]=viewOperacionesCompras.getWidth();   
+  widht[8]=viewReportesClientes.getWidth();
+  widht[9]=viewReportesCompras.getWidth();   
+  widht[10]=viewReportesProductos.getWidth();
+  widht[11]=viewReportesProveedores.getWidth();   
+  widht[12]=viewReportesVentas.getWidth();
+int height[]= new int[13];
+height[0]=viewProductosModificacion.getHeight();   
+  height[1]=viewProveedores.proveedores.getHeight();
+  height[2]=viewCliente.getHeight();   
+  height[3]=viewAcercaDe.getHeight();
+  height[4]=viewIniciarSeccion.iniSecion.getHeight();   
+  height[5]=viewUsuarios.getHeight(); 
+  height[6]=viewOperacionesVentas.getHeight();
+  height[7]=viewOperacionesCompras.getHeight();   
+  height[8]=viewReportesClientes.getHeight();
+  height[9]=viewReportesCompras.getHeight();   
+  height[10]=viewReportesProductos.getHeight();
+  height[11]=viewReportesProveedores.getHeight();   
+  height[12]=viewReportesVentas.getHeight();
+  //-----------------------------------------------end
    // declarar
- viewMain =new ViewMain();   
+ //viewMain =new ViewMain();   
     modelMain=new ModelMain();
-    controllerMain=new ControllerMain(viewMain,modelMain,views);
- 
+    controllerMain=new ControllerMain(viewMain, modelMain, views, widht, height);
+    
 controllerMain.initView();
     }
      
