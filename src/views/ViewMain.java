@@ -27,6 +27,7 @@ public class ViewMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMcatalogos = new javax.swing.JMenu();
         jMiniciarsecion = new javax.swing.JMenuItem();
@@ -49,7 +50,8 @@ public class ViewMain extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(684, 531));
         setMinimumSize(new java.awt.Dimension(684, 531));
-        setPreferredSize(new java.awt.Dimension(684, 531));
+
+        jLabel1.setText("ACME_Shop");
 
         jMcatalogos.setText("Archivos");
 
@@ -122,11 +124,17 @@ public class ViewMain extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 684, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(308, 308, 308)
+                .addComponent(jLabel1)
+                .addContainerGap(318, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(232, 232, 232)
+                .addComponent(jLabel1)
+                .addContainerGap(264, Short.MAX_VALUE))
         );
 
         pack();
@@ -177,6 +185,7 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     public javax.swing.JMenu jMacercade;
     public javax.swing.JMenu jMcatalogos;
     public javax.swing.JMenuItem jMclientes;
