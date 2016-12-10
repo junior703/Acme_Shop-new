@@ -101,7 +101,7 @@ public class ControllerCliente   implements ActionListener
         try 
         {
             conn.conectar();
-            String di = "C:\\Users\\Azael\\Documents\\acme_shop\\acme_Shop_MVC\\src\\views\\report1.jrxml";
+            String di = "C:\\Users\\Azael\\Desktop\\acme_Shop_MVC\\src\\views\\report.jrxml";
             JasperReport reportJasper =JasperCompileManager.compileReport(di);
             JasperPrint mostrarReporte = JasperFillManager.fillReport(reportJasper, null, conn.getConn());
             JasperViewer.viewReport(mostrarReporte);

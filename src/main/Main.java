@@ -15,28 +15,28 @@ import javax.swing.JPanel;
  */
 public class Main {
 
-  private static ViewMain viewMain;
+    private static ViewMain viewMain;
     private static ModelMain modelMain;
     private static ControllerMain controllerMain;
  
-  private static ViewProductosModificacion viewProductosModificacion;
-       private static  ModelProductosModificacion modelProductosModificacion;
-           private static  ControllerProductosModificacion controllerProductosModificacion;
+    private static ViewProductosModificacion viewProductosModificacion;
+    private static  ModelProductosModificacion modelProductosModificacion;
+    private static  ControllerProductosModificacion controllerProductosModificacion;
            
-            private static ViewCliente viewCliente ;
-       private static  ModelCliente  modelCliente;
-           private static  ControllerCliente controllerCliente;
+    private static ViewCliente viewCliente ;
+    private static  ModelCliente  modelCliente;
+    private static  ControllerCliente controllerCliente;
 
-           private static ViewProveedores viewProveedores;
+    private static ViewProveedores viewProveedores;
     private static ModelProveedores modelProveedores;
     private static ControllerProveedores controllerProveedores;
     ///********************************************************************//
     
-               private static ViewIniciarSeccion viewIniciarSeccion;
+    private static ViewIniciarSeccion viewIniciarSeccion;
     private static ModelIniciarSeccion modelIniciarSeccion;
     private static ControllerIniciarSeccion controllerIniciarSeccion;
     
-     private static ViewUsuarios viewUsuarios;
+    private static ViewUsuarios viewUsuarios;
     private static ModelUsuarios  modelUsuarios ;
     private static ControllerUsuarios  controllerUsuarios ;
       ///********************************************************************//
@@ -56,20 +56,20 @@ public class Main {
       ///********************************************************************//
     
     private static ViewReportesClientes viewReportesClientes;
-    private static ModelReportesClientes modelReportesClientes;
+    private static ModelReportesClientes modelmainClientes;
     private static ControllerReportesClientes  controllerReportesClientes ;
     
      private static ViewReportesProductos viewReportesProductos;
-    private static ModelReportesProductos modelReportesProductos;
+    private static ModelMain modelmainProductos;
     private static ControllerReportesProductos  controllerReportesProductos ;
     
      private static ViewReportesProveedores viewReportesProveedores;
-    private static ModelReportesProveedores modelReportesProveedores;
+    private static ModelReportesCompras modelReportesProveedores;
     private static ControllerReportesProveedores  controllerReportesProveedores ;
     
      private static ViewReportesVentas viewReportesVentas;
     private static ModelReportesVentas modelReportesVentas;
-    private static ControllerReportesVentas  controllerReportesVentas ;
+   private static ControllerReportesVentas  controllerReportesVentas ;
     
      private static ViewReportesCompras viewReportesCompras;
     private static ModelReportesCompras modelReportesCompras;
@@ -111,30 +111,30 @@ public class Main {
         modelOperacionesCompras=new ModelOperacionesCompras();
   controllerOperacionesCompras=new ControllerOperacionesCompras(viewOperacionesCompras,modelOperacionesCompras);////////////////////////
     
-      //    modelIniciarSeccion=new ModelIniciarSeccion();
-  viewOperacionesVentas=new  ViewOperacionesVentas();
+        modelIniciarSeccion=new ModelIniciarSeccion();
+        viewOperacionesVentas=new  ViewOperacionesVentas();
         modelOperacionesVentas=new ModelOperacionesVentas();
-  controllerOperacionesVentas=new ControllerOperacionesVentas(viewOperacionesVentas,modelOperacionesVentas,modelIniciarSeccion);////////////////////////
+        controllerOperacionesVentas=new ControllerOperacionesVentas(viewOperacionesVentas,modelOperacionesVentas,modelIniciarSeccion);////////////////////////
   
-  viewReportesClientes=new  ViewReportesClientes();
-        modelReportesClientes=new ModelReportesClientes();
-  controllerReportesClientes=new ControllerReportesClientes(viewReportesClientes,modelReportesClientes);////////////////////////
+        viewReportesClientes=new  ViewReportesClientes();
+        //modelReportesClientes=new ModelReporteClientes();
+        //controllerReportesClientes=new ControllerReportesClientes(viewReportesClientes,modelReportesClientes);////////////////////////
   
-     viewReportesProductos=new  ViewReportesProductos();
-        modelReportesProductos=new ModelReportesProductos();
-  controllerReportesProductos=new ControllerReportesProductos(viewReportesProductos,modelReportesProductos);////////////////////////
+        viewReportesProductos=new  ViewReportesProductos();
+        //modelReportesProductos=new ModelReporteProductos();
+       // controllerReportesProductos=new ControllerReportesProductos(viewReportesProductos,modelReportesProductos);////////////////////////
   
-  viewReportesProveedores=new  ViewReportesProveedores();
-        modelReportesProveedores=new ModelReportesProveedores();
-  controllerReportesProveedores=new ControllerReportesProveedores(viewReportesProveedores,modelReportesProveedores);////////////////////////
+        viewReportesProveedores=new  ViewReportesProveedores();
+       // modelReportesProveedores=new ModelReportesProveedores();
+       // controllerReportesProveedores=new ControllerReportesProveedores(viewReportesProveedores,modelReportesProveedores);////////////////////////
   
-  viewReportesCompras=new  ViewReportesCompras();
-        modelReportesCompras=new ModelReportesCompras();
-  controllerReportesCompras=new ControllerReportesCompras(viewReportesCompras,modelReportesCompras);////////////////////////
+        viewReportesCompras=new  ViewReportesCompras();
+       // modelReportesCompras=new ModelReportesCompras();
+     //   controllerReportesCompras=new ControllerReportesCompras(viewReportesCompras,modelReportesCompras);////////////////////////
   
-    viewReportesVentas=new  ViewReportesVentas();
-        modelReportesVentas=new ModelReportesVentas();
-  controllerReportesVentas=new ControllerReportesVentas(viewReportesVentas,modelReportesVentas);////////////////////////
+        viewReportesVentas=new  ViewReportesVentas();
+        //modelReportesVentas=new ModelReportesVentas();
+       // controllerReportesVentas=new ControllerReportesVentas(viewReportesVentas,modelReportesVentas);////////////////////////
   
   
   JPanel views[]=new JPanel[13];  

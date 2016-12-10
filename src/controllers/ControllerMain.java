@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -110,6 +106,9 @@ jmiProvedores();
         this.viewmain.setContentPane(views[2]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.setSize(780, 700);
+        this.viewmain.setLocationRelativeTo(null);
+        
     }
           public void jMacercade(){
         this.viewmain.setContentPane(views[3]);
@@ -146,27 +145,33 @@ jmiProvedores();
         this.viewmain.setContentPane(views[8]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.pack();
+        this.viewmain.setSize(300, 300);
     }
                  public void jMreportesCompras(){
         this.viewmain.setContentPane(views[9]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.setSize(300, 300);
     }
                   public void jMreportesProductos(){
         this.viewmain.setContentPane(views[10]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.setSize(300, 300);
     }
     public void jMreportesProveedores(){
         this.viewmain.setContentPane(views[11]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.setSize(300, 300);
         this.viewmain.setLocationRelativeTo(null);
     }
                     public void jMreportesVentas(){
         this.viewmain.setContentPane(views[12]);
         this.viewmain.revalidate();
         this.viewmain.repaint();
+        this.viewmain.setSize(300, 300);
     }
      public void initView(){
         this.viewmain.setTitle("Acme Shop");

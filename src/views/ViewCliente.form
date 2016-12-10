@@ -74,18 +74,16 @@
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jtfTelephone" min="-2" pref="91" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                           <Component id="jtfMatLastName" max="32767" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jtfRFC" min="-2" pref="91" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jtfTelephone" min="-2" pref="91" max="-2" attributes="0"/>
+                                              <Component id="jtfRFC" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -489,7 +487,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="440" y="20" width="250" height="260"/>
+          <AbsoluteConstraints x="440" y="20" width="240" height="260"/>
         </Constraint>
       </Constraints>
 
@@ -501,13 +499,13 @@
                   <Component id="jbborrar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jBsaveeditar" min="-2" max="-2" attributes="0"/>
                       <Component id="jbguadar" alignment="1" min="-2" pref="61" max="-2" attributes="0"/>
                       <Component id="jbeditar" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jBsaveeditar" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jbagregar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <EmptySpace pref="14" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
