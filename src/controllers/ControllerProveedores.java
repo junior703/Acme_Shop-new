@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 package controllers;
+import com.sun.prism.impl.PrismSettings;
 import sax.DBConnection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyAdapter;
+import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import views.ViewProveedores;
 import models.ModelProveedores;
 
@@ -17,7 +20,7 @@ import models.ModelProveedores;
  *
  * @author DRAGKOZ
  */
-public class ControllerProveedores implements ActionListener{
+public class ControllerProveedores implements ActionListener/*, FocusListener*/{
     private final ViewProveedores viewProveedores;
     private final ModelProveedores modelProveedores;
    
@@ -36,6 +39,43 @@ public class ControllerProveedores implements ActionListener{
         this.viewProveedores.jbtn_last.addActionListener(this);
         this.viewProveedores.jbtn_buscar.addActionListener(this);
         this.viewProveedores.jbtn_saveEdit.addActionListener(this);
+        this.viewProveedores.jtf_No.addKeyListener(new KeyAdapter(){
+            public void keyTyped(KeyEvent e){
+                char c = e.getKeyChar();
+                if(!Character.isDigit(c) && e.getKeyChar()!=8 && e.getKeyChar()!=127){
+                    e.consume();
+                    JOptionPane.showMessageDialog(null, "Por Favor Solo Ingrese Numeros", "ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
+                }else if(viewProveedores.jtf_No.getText().length()==3){
+                    e.consume();
+                    JOptionPane.showMessageDialog(null, "No Introduzca Mas De 3 Carateres", "ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
+                }
+            }
+        });
+        this.viewProveedores.jtf_Telefono.addKeyListener(new KeyAdapter(){
+            public void keyTyped(KeyEvent e){
+                char c = e.getKeyChar();
+                if(!Character.isDigit(c) && e.getKeyChar()!=8 && e.getKeyChar()!=127){
+                    e.consume();
+                    JOptionPane.showMessageDialog(null, "Por Favor Solo Ingrese Numeros", "ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
+                }else if(viewProveedores.jtf_Telefono.getText().length()==10){
+                    e.consume();
+                    JOptionPane.showMessageDialog(null, "No Introduzca Mas De 10 Carateres", "ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
+                }
+            }
+        });
+        this.viewProveedores.jtf_id.addKeyListener(new KeyAdapter(){
+            public void keyTyped(KeyEvent e){
+                char c = e.getKeyChar();
+                if(!Character.isDigit(c) && e.getKeyChar()!=8 && e.getKeyChar()!=127){
+                    e.consume();
+                    JOptionPane.showMessageDialog(null, "Por Favor Solo Ingrese Numeros", "ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
+                }else if(viewProveedores.jtf_id.getText().length()==4){
+                    e.consume();
+                    JOptionPane.showMessageDialog(null, "No Introduzca Mas De 4 Carateres", "ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
+                }
+            }
+        });
+                
         initView();
         firstButton();
         showRecords();
@@ -89,6 +129,7 @@ public class ControllerProveedores implements ActionListener{
         viewProveedores.jtf_Contacto.setText("");
         viewProveedores.jtf_Telefono.setText("");
         viewProveedores.jtf_EMail.setText("");
+        viewProveedores.jbtn_guardar.setEnabled(true);
     }
     
     public void guardar(){
@@ -102,7 +143,7 @@ public class ControllerProveedores implements ActionListener{
             String ciudad = viewProveedores.jtf_Calle.getText();
             String estado = viewProveedores.jtf_Estado.getText();
             String contacto = viewProveedores.jtf_Contacto.getText();
-            int telefono = Integer.parseInt(viewProveedores.jtf_Telefono.getText());
+            String telefono = viewProveedores.jtf_Telefono.getText();            
             String email = viewProveedores.jtf_EMail.getText();
             if (viewProveedores.jtf_Nombre.getText().isEmpty() || viewProveedores.jtf_RFC.getText().isEmpty() || viewProveedores.jtf_Calle.getText().isEmpty()
                 || viewProveedores.jtf_No.getText().isEmpty() || viewProveedores.jtf_Colonia.getText().isEmpty() || viewProveedores.jtf_Ciudad.getText().isEmpty()
@@ -114,7 +155,11 @@ public class ControllerProveedores implements ActionListener{
             showValues();
             firstButton();
             clear();
+            viewProveedores.jbtn_guardar.setEnabled(false);
             }
+            viewProveedores.jbtn_guardar.setEnabled(false);
+        }else{
+            viewProveedores.jbtn_guardar.setEnabled(false);
         }
     }
     
@@ -147,7 +192,7 @@ public class ControllerProveedores implements ActionListener{
             String ciudad = viewProveedores.jtf_Calle.getText();
             String estado = viewProveedores.jtf_Estado.getText();
             String contacto = viewProveedores.jtf_Contacto.getText();
-            int telefono = Integer.parseInt(viewProveedores.jtf_Telefono.getText());
+            String telefono = viewProveedores.jtf_Telefono.getText();
             String email = viewProveedores.jtf_EMail.getText();
             modelProveedores.updateD(id, nombre, rfc, calle, no, colonia, ciudad, estado, contacto, telefono, email);
             JOptionPane.showMessageDialog(null, "Se han guardado los cambios con éxito");
@@ -181,22 +226,63 @@ public class ControllerProveedores implements ActionListener{
         }
         showRecords();
     }
+
+    /**
+     *
+     */
     public void buscar(){
-        DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
-        String sql = "SELECT * FROM proveedor WHERE id_proveedor = "+viewProveedores.jtf_id.getText(); 
-        connection.executeQuery(sql);
-        connection.moveNext();
-        viewProveedores.jtf_id.setText(connection.getString("id_proveedor"));
-        viewProveedores.jtf_Nombre.setText(connection.getString("nombre"));
-        viewProveedores.jtf_RFC.setText(connection.getString("rfc"));
-        viewProveedores.jtf_Calle.setText(connection.getString("calle"));    
-        viewProveedores.jtf_No.setText(connection.getString("no"));
-        viewProveedores.jtf_Colonia.setText(connection.getString("colonia"));
-        viewProveedores.jtf_Ciudad.setText(connection.getString("ciudad"));
-        viewProveedores.jtf_Estado.setText(connection.getString("estado"));
-        viewProveedores.jtf_Contacto.setText(connection.getString("nombre_contacto"));
-        viewProveedores.jtf_Telefono.setText(connection.getString("telefono"));
-        viewProveedores.jtf_EMail.setText(connection.getString("email"));
+        DBConnection connection1 = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
+        
+        String c =""+this.viewProveedores.jtf_id.getText();
+        
+        String sql1 = "SELECT id_proveedor FROM proveedor;";
+        connection1.executeQuery(sql1);
+        Vector<String> id = new Vector<>(); 
+        while(connection1.moveNext()){
+             id.add(String.valueOf(connection1.getInteger("id_proveedor")));
+        }
+        String ids="";
+        for(int x=0;x<id.size();x++){
+            ids=ids+id.elementAt(x);
+        }
+        System.out.println(""+ids);
+        if(viewProveedores.jtf_id.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "por favor ingrese un valor", "ATENCION", JOptionPane.WARNING_MESSAGE);
+        }else if(ids.contains(c)){
+            DBConnection connection = new DBConnection(3306,"localhost", "acme_shop", "root", "7890");
+            String sql = "SELECT * FROM proveedor WHERE id_proveedor = "+c; 
+            connection.executeQuery(sql);
+            connection.moveNext();
+            try {
+                if(connection.getString("id_proveedor").isEmpty()){
+                    System.out.println("no hay valores");
+                }else{
+                    viewProveedores.jtf_id.setText(connection.getString("id_proveedor"));
+                    viewProveedores.jtf_Nombre.setText(connection.getString("nombre"));
+                    viewProveedores.jtf_RFC.setText(connection.getString("rfc"));
+                    viewProveedores.jtf_Calle.setText(connection.getString("calle"));    
+                    viewProveedores.jtf_No.setText(connection.getString("no"));
+                    viewProveedores.jtf_Colonia.setText(connection.getString("colonia"));
+                    viewProveedores.jtf_Ciudad.setText(connection.getString("ciudad"));
+                    viewProveedores.jtf_Estado.setText(connection.getString("estado"));
+                    viewProveedores.jtf_Contacto.setText(connection.getString("nombre_contacto"));
+                    viewProveedores.jtf_Telefono.setText(connection.getString("telefono"));
+                    viewProveedores.jtf_EMail.setText(connection.getString("email"));
+                }
+            } catch (Exception e) {
+
+            }
+        } else{
+            JOptionPane.showMessageDialog(null, "No existe esa compra", "ATENCION", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        
+        
+        
+        
+        
+       
+        
     }
 
     @Override
@@ -242,4 +328,22 @@ public class ControllerProveedores implements ActionListener{
             }
         });
     }
+
+    /*@Override
+    public void focusGained(FocusEvent a) {
+        
+    }
+
+    @Override
+    public void focusLost(FocusEvent e) {
+        
+    }*/
+    public void soloNumeros(KeyEvent e){
+        char c = e.getKeyChar();
+        if(Character.isLetter(c)){
+            e.consume();
+            JOptionPane.showMessageDialog(null, "Por Favor Solo Ingrese Numeros", "ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+    
 }
