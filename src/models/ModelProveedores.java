@@ -26,7 +26,7 @@ public class ModelProveedores {
     private String ciudad;
     private String estado;
     private String contacto;
-    private int telefono;
+    private String telefono;
     private String email;
     
     public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_proveedor", "nombre", "rfc", 
@@ -147,14 +147,14 @@ public class ModelProveedores {
     /**
      * @return the telefono
      */
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
     /**
      * @param telefono the telefono to set
      */
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -202,7 +202,7 @@ public class ModelProveedores {
         ciudad = connection.getString("ciudad");
         estado = connection.getString("estado");
         contacto=connection.getString("nombre_contacto");
-        telefono=connection.getInteger("telefono");
+        telefono=connection.getString("telefono");
         email = connection.getString("email");
     }
     
@@ -232,14 +232,14 @@ public class ModelProveedores {
         setValues();
     }
             
-    public void saveR(String nombre, String rfc, String calle, int no, String colonia, String ciudad, String estado, String contacto, int telefono, String email){
+    public void saveR(String nombre, String rfc, String calle, int no, String colonia, String ciudad, String estado, String contacto, String telefono, String email){
         String add = "INSERT INTO proveedor (`nombre`,`rfc`,`calle`,`no`,`colonia`,`ciudad`,`estado`,`nombre_contacto`,`telefono`,`email`)"
                 + " VALUES ('"+nombre+"', '"+rfc+ "', '"+calle+"', '"+no+"', '"+colonia+"', '"+ciudad+"', '"+estado+"', '"+contacto+"', '"+telefono+"', '"+email+"');";
      connection.executeUpdate(add);
      initValues();
     }
     
-    public void updateD(int id, String nombre, String rfc, String calle, int no, String colonia, String ciudad, String estado, String contacto, int telefono, String email) {
+    public void updateD(int id, String nombre, String rfc, String calle, int no, String colonia, String ciudad, String estado, String contacto, String telefono, String email) {
         String alter = "UPDATE proveedor SET nombre ='"+nombre+"', rfc ='"+rfc+"', calle ='"+calle+"' , no='" +no+"' , colonia='" +ciudad+"', estado ='"+estado+"', nombre_contacto ='"+contacto+"', telefono ='"+telefono+"', email ='"+email+"'  " + "WHERE id_proveedor =" +id;
         connection.executeUpdate(alter);
         initValues();
@@ -256,12 +256,5 @@ public class ModelProveedores {
             setValues();
             tableModel.addRow(new Object []{id_proveedor, nombre, rfc, calle, no, colonia, ciudad, estado, contacto, telefono, email});
         }
-    }
-    
-    public void busqueda(int idproductos) {
-        String query =   "Select * from proveedor  WHERE id_proveedor = "+idproductos; 
-        connection.executeQuery(query);
-                connection.moveNext();
-          setValues();
-    }  
+    } 
 }
